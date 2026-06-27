@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BrokerPost AI | Content Ideas for Canadian Insurance Agencies</title>
+
+  <meta
+    name="description"
+    content="Get a free 30-day content preview for your Canadian insurance agency. BrokerPost AI creates marketing-safe content ideas, post prompts, and short-form video concepts for broker review."
+  />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+      --yellow: #facc15;
+      --yellow-dark: #eab308;
+      --blue: #2563eb;
+      --green: #16a34a;
+      --danger: #dc2626;
+      --radius: 18px;
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.96);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+    }
+
+    .brand span {
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #111827;
+      box-shadow: 0 12px 25px rgba(250, 204, 21, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(250, 204, 21, 0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.22), transparent 36%),
+        var(--bg);
+      color: #ffffff;
+      padding: 86px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(250, 204, 21, 0.12);
+      color: #fde68a;
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.45rem, 5vw, 4.8rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+      margin: 0 0 22px;
+      max-width: 830px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 1.15rem;
+      max-width: 670px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .trust-pill {
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-card {
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.28);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .mini-preview {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini-item {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #f8fafc;
+    }
+
+    .mini-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .mini-item span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      letter-spacing: -0.025em;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .sample {
+      background: #ffffff;
+    }
+
+    .sample-box {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .sample-box h3 {
+      margin: 0 0 18px;
+      font-size: 1.35rem;
+    }
+
+    .sample-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .sample-row {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .sample-row strong {
+      color: var(--yellow);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .sample-row span {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      counter-reset: step;
+    }
+
+    .step {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: relative;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--yellow);
+      color: #111827;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .request {
+      background:
+        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .form-side {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-side h2 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .form-side p {
+      color: #cbd5e1;
+      margin: 0 0 20px;
+    }
+
+    .form-side ul {
+      padding-left: 20px;
+      margin: 0;
+      color: #e2e8f0;
+    }
+
+    .form-side li {
+      margin-bottom: 9px;
+    }
+
+    form {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.10);
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin: 16px 0 0;
+    }
+
+    .form-submit {
+      margin-top: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .status-message {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .status-success {
+      color: var(--green);
+    }
+
+    .status-error {
+      color: var(--danger);
+    }
+
+    .faq {
+      background: #ffffff;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: #ffffff;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .final-cta {
+      background: var(--bg);
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 0;
+    }
+
+    .final-cta h2 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+    }
+
+    .final-cta p {
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 28px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .disclaimer {
+      max-width: 860px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .form-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .steps,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#">
+          <strong>BrokerPost AI</strong>
+          <span>Content previews for Canadian insurance agencies</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#sample">Sample</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#request">Request preview</a>
+          <a href="#request" class="btn btn-primary">Get Free Preview</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Built for Canadian insurance agencies</div>
+
+            <h1>See what your insurance agency should post next month.</h1>
+
+            <p>
+              BrokerPost AI creates a free 30-day content preview based on your agency,
+              province, services, and local market — so your team has practical post ideas,
+              short-form video concepts, and education angles to review.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#request" class="btn btn-primary">Request My Free Preview</a>
+              <a href="#sample" class="btn btn-secondary">See What You Get</a>
+            </div>
+
+            <div class="trust-row">
+              <span class="trust-pill">Canadian insurance-aware</span>
+              <span class="trust-pill">Broker-review-safe</span>
+              <span class="trust-pill">Built for local agencies</span>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Preview example">
+            <h2>Your free preview includes:</h2>
+
+            <div class="mini-preview">
+              <div class="mini-item">
+                <strong>30-day content direction</strong>
+                <span>Practical post ideas built around your services and market.</span>
+              </div>
+
+              <div class="mini-item">
+                <strong>Short-form video script</strong>
+                <span>A simple broker-review-safe video concept your team can adapt.</span>
+              </div>
+
+              <div class="mini-item">
+                <strong>Local education angles</strong>
+                <span>Province-aware topics that help your audience understand insurance better.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="benefits">
+        <div class="container">
+          <div class="section-title">
+            <h2>Most agencies know they should post. The hard part is knowing what to say.</h2>
+            <p>
+              BrokerPost AI helps turn your agency details into practical content ideas
+              that are easier to review, refine, and publish.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>Stop guessing every week</h3>
+              <p>
+                Get a clear starting point for educational posts, FAQs, short videos,
+                and local trust-building content.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Built with Canadian context</h3>
+              <p>
+                The preview considers your province or territory so content does not
+                assume insurance works the same everywhere.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Review before publishing</h3>
+              <p>
+                The system is intentionally semi-automated. Your brokerage reviews
+                anything before it is used publicly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sample" class="sample">
+        <div class="container">
+          <div class="section-title">
+            <h2>What the preview looks like</h2>
+            <p>
+              The goal is not generic social media fluff. The goal is useful, local,
+              broker-review-safe content your agency can actually work with.
+            </p>
+          </div>
+
+          <div class="sample-box">
+            <h3>Sample preview topics</h3>
+
+            <div class="sample-list">
+              <div class="sample-row">
+                <strong>Post idea: “What should homeowners review before renewal?”</strong>
+                <span>A simple educational post that encourages clients to review changes in their home, renovations, valuables, and occupancy with a licensed broker.</span>
+              </div>
+
+              <div class="sample-row">
+                <strong>Short video: “Three insurance questions to ask before buying a home”</strong>
+                <span>A 30–45 second script your agency can adapt for Instagram, LinkedIn, Facebook, or TikTok.</span>
+              </div>
+
+              <div class="sample-row">
+                <strong>Local angle: “Insurance conversations for Vancouver homeowners”</strong>
+                <span>A province-aware content angle that avoids policy advice and encourages proper broker review.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <div class="container">
+          <div class="section-title">
+            <h2>How it works</h2>
+            <p>
+              A simple review-based workflow. You submit your details, we build a preview,
+              and your agency can decide if the content direction is useful.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <h3>Submit your agency</h3>
+              <p>Share your agency name, province, services, website, and biggest content challenge.</p>
+            </div>
+
+            <div class="step">
+              <h3>We build the preview</h3>
+              <p>BrokerPost AI creates a draft content preview using Canadian insurance-aware guardrails.</p>
+            </div>
+
+            <div class="step">
+              <h3>Human review</h3>
+              <p>The preview is reviewed before delivery. This keeps the process practical and safer.</p>
+            </div>
+
+            <div class="step">
+              <h3>You decide next steps</h3>
+              <p>Use the sample internally, request changes, or explore a monthly content system.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="request" class="request">
+        <div class="container form-wrap">
+          <div class="form-side">
+            <h2>Request your free content preview</h2>
+            <p>
+              Submit your agency details and we’ll prepare a free 30-day content preview
+              you can review with your team.
+            </p>
+
+            <ul>
+              <li>Built around your agency and services</li>
+              <li>Province / territory-aware</li>
+              <li>Includes post ideas and a short-form video concept</li>
+              <li>General marketing content only</li>
+              <li>Designed for broker review before publishing</li>
+            </ul>
+          </div>
+
+          <form id="previewForm">
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="fullName">Full Name *</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label for="agencyName">Agency Name *</label>
+                <input id="agencyName" name="agencyName" type="text" required />
+              </div>
+
+              <div class="field">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="url" placeholder="https://example.com" />
+              </div>
+
+              <div class="field">
+                <label for="location">Location *</label>
+                <input id="location" name="location" type="text" placeholder="Vancouver" required />
+              </div>
+
+              <div class="field">
+                <label for="province">Province / Territory *</label>
+                <select id="province" name="province" required>
+                  <option value="">Select province / territory</option>
+                  <option value="British Columbia">British Columbia</option>
+                  <option value="Alberta">Alberta</option>
+                  <option value="Saskatchewan">Saskatchewan</option>
+                  <option value="Manitoba">Manitoba</option>
+                  <option value="Ontario">Ontario</option>
+                  <option value="Quebec">Quebec</option>
+                  <option value="New Brunswick">New Brunswick</option>
+                  <option value="Nova Scotia">Nova Scotia</option>
+                  <option value="Prince Edward Island">Prince Edward Island</option>
+                  <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                  <option value="Yukon">Yukon</option>
+                  <option value="Northwest Territories">Northwest Territories</option>
+                  <option value="Nunavut">Nunavut</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="mainServices">Main Services *</label>
+                <input
+                  id="mainServices"
+                  name="mainServices"
+                  type="text"
+                  placeholder="Home Insurance, Auto Insurance, Business Insurance"
+                  required
+                />
+              </div>
+
+              <div class="field full">
+                <label for="biggestContentChallenge">Biggest Content Challenge *</label>
+                <textarea
+                  id="biggestContentChallenge"
+                  name="biggestContentChallenge"
+                  placeholder="Example: We do not know what to post consistently."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+
+            </div>
+
+            <p class="form-note">
+              BrokerPost AI creates general marketing content only. It does not provide insurance,
+              legal, claims, compliance, or policy advice. All content should be reviewed by a licensed
+              broker or qualified representative before publishing.
+            </p>
+
+            <div class="form-submit">
+              <button id="submitButton" class="btn btn-primary" type="submit">
+                Request Free Preview
+              </button>
+
+              <span id="formStatus" class="status-message" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container">
+          <div class="section-title">
+            <h2>Questions before you request a preview</h2>
+            <p>
+              BrokerPost AI is built as a practical marketing support system, not a replacement
+              for licensed broker review.
+            </p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Is this insurance advice?</h3>
+              <p>
+                No. BrokerPost AI creates general marketing content ideas. It does not provide
+                insurance advice, policy interpretation, claims advice, legal advice, or compliance guarantees.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Do we need to review the content?</h3>
+              <p>
+                Yes. Your agency should review and approve anything before publishing, especially
+                where province-specific insurance rules or product wording may apply.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Why does province or territory matter?</h3>
+              <p>
+                Insurance structures can vary across Canada, especially auto insurance. The preview
+                uses the province or territory to keep the content direction more cautious and relevant.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What happens after the free preview?</h3>
+              <p>
+                You can use the sample internally, request changes, or discuss a monthly content workflow
+                for ongoing posts, scripts, and campaign ideas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <h2>Ready to see what your agency could post next?</h2>
+          <p>
+            Request a free BrokerPost AI content preview and get a practical starting point
+            for your agency’s next month of marketing.
+          </p>
+          <a href="#request" class="btn btn-primary">Get My Free Preview</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <strong>BrokerPost AI</strong><br />
+          Content previews for Canadian insurance agencies.
+        </div>
+
+        <div class="disclaimer">
+          General marketing content only. BrokerPost AI does not provide insurance, legal,
+          claims, compliance, or policy advice. Review all content before publishing.
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+    const form = document.getElementById("previewForm");
+    const statusEl = document.getElementById("formStatus");
+    const submitButton = document.getElementById("submitButton");
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      statusEl.textContent = "";
+      statusEl.className = "status-message";
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+
+      const formData = new FormData(form);
+
+      const payload = {
+        fullName: formData.get("fullName") || "",
+        agencyName: formData.get("agencyName") || "",
+        website: formData.get("website") || "",
+        location: formData.get("location") || "",
+        province: formData.get("province") || "",
+        mainServices: formData.get("mainServices") || "",
+        biggestContentChallenge: formData.get("biggestContentChallenge") || "",
+        email: formData.get("email") || "",
+        phone: formData.get("phone") || "",
+        source: "BrokerPost AI Website",
+        submittedAt: new Date().toISOString()
+      };
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        form.reset();
+
+        statusEl.textContent = "Request sent. We’ll review your details and prepare your preview.";
+        statusEl.className = "status-message status-success";
+
+      } catch (error) {
+        statusEl.textContent = "Something went wrong. Please try again or contact us directly.";
+        statusEl.className = "status-message status-error";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Request Free Preview";
+      }
+    });
+  </script>
+</body>
+</html>
