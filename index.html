@@ -3,1020 +3,1645 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>BrokerPost AI | Content Ideas for Canadian Insurance Agencies</title>
-
-  <meta
-    name="description"
-    content="Get a free 30-day content preview for your Canadian insurance agency. BrokerPost AI creates marketing-safe content ideas, post prompts, and short-form video concepts for broker review."
-  />
-
+  <title>BrokerPost AI | Free Content Preview for Insurance Agencies</title>
+  <meta name="description" content="See what your insurance agency should post next month. Get a free 30-day content plan preview with custom post ideas, a short-form video script, and content opportunities based on your services and local market." />
+  <meta property="og:title" content="BrokerPost AI | Free Content Preview for Insurance Agencies" />
+  <meta property="og:description" content="Get a free 30-day content plan preview for your insurance agency." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b55ff" />
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --light: #f8fafc;
-      --border: #e2e8f0;
-      --yellow: #facc15;
-      --yellow-dark: #eab308;
-      --blue: #2563eb;
-      --green: #16a34a;
-      --danger: #dc2626;
-      --radius: 18px;
-      --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-      --max: 1120px;
+      --ink: #07112f;
+      --muted: #3b4563;
+      --blue: #0b55ff;
+      --blue-2: #0f63ff;
+      --yellow: #ffc400;
+      --line: #dce3ef;
+      --soft: #f7f9fc;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--light);
-      line-height: 1.55;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      min-width: 1180px;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 13% 28%, rgba(255, 216, 33, .16), transparent 18%),
+        radial-gradient(circle at 87% 20%, rgba(54, 118, 255, .11), transparent 21%),
+        #fff;
+      letter-spacing: 0;
     }
 
     .page {
-      overflow: hidden;
-    }
-
-    .container {
-      width: min(100% - 32px, var(--max));
+      width: 1440px;
       margin: 0 auto;
+      padding: 18px 38px 36px;
     }
 
     header {
-      background: rgba(15, 23, 42, 0.96);
-      color: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      min-height: 72px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      padding: 0 71px;
     }
 
     .brand {
       display: flex;
-      flex-direction: column;
-      line-height: 1.1;
+      align-items: center;
+      gap: 10px;
+      font-size: 27px;
+      line-height: 1;
+      font-weight: 800;
     }
 
-    .brand strong {
-      font-size: 1.15rem;
-      letter-spacing: -0.03em;
+    .brand span { font-weight: 500; }
+
+    .bolt-mark {
+      width: 34px;
+      height: 28px;
+      border-radius: 15px 15px 15px 3px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, #ffcb00, #f5ae00);
+      box-shadow: inset 0 -1px rgba(0,0,0,.08);
     }
 
-    .brand span {
-      color: #cbd5e1;
-      font-size: 0.82rem;
-      margin-top: 4px;
-    }
+    .bolt-mark svg { width: 17px; fill: #fff; }
 
-    .nav-links {
+    nav {
       display: flex;
       align-items: center;
-      gap: 20px;
-      font-size: 0.95rem;
-      color: #e2e8f0;
+      gap: 46px;
+      margin-left: 26px;
+      font-size: 12px;
+      font-weight: 700;
     }
 
-    .nav-links a:hover {
-      color: var(--yellow);
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
     }
 
-    .btn {
+    .nav-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 13px 20px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: 0.2s ease;
-      font-size: 0.95rem;
-      text-align: center;
+      border-radius: 15px;
+      border: 1px solid var(--line);
+      height: 45px;
+      padding: 0 25px;
+      color: var(--ink);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 1px 0 rgba(10, 26, 61, .02);
     }
 
-    .btn-primary {
-      background: var(--yellow);
-      color: #111827;
-      box-shadow: 0 12px 25px rgba(250, 204, 21, 0.28);
+    .button.primary {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(180deg, #155dff, #064cff);
+      box-shadow: 0 10px 18px rgba(0, 74, 255, .18);
     }
 
-    .btn-primary:hover {
-      background: var(--yellow-dark);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: #ffffff;
-      color: #111827;
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
+    .button.small {
+      height: 37px;
+      padding: 0 20px;
+      border-radius: 13px;
+      font-size: 12px;
     }
 
     .hero {
+      position: relative;
+      height: 608px;
+      margin-top: 12px;
+      border-radius: 22px;
+      overflow: hidden;
       background:
-        radial-gradient(circle at top left, rgba(250, 204, 21, 0.18), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.22), transparent 36%),
-        var(--bg);
-      color: #ffffff;
-      padding: 86px 0 76px;
+        radial-gradient(circle at 5% 94%, rgba(255, 211, 0, .75), transparent 24%),
+        radial-gradient(circle at 84% 67%, rgba(91, 136, 255, .32), transparent 33%),
+        linear-gradient(110deg, #fff 0%, #fff 46%, #f6f9ff 100%);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 42px;
-      align-items: center;
+    .hero-copy {
+      position: absolute;
+      left: 71px;
+      top: 50px;
+      width: 650px;
+      z-index: 3;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(250, 204, 21, 0.12);
-      color: #fde68a;
-      font-weight: 700;
-      font-size: 0.88rem;
-      margin-bottom: 18px;
+    h1 {
+      margin: 0;
+      font-size: 53px;
+      line-height: .99;
+      font-weight: 880;
+      letter-spacing: -2.2px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.45rem, 5vw, 4.8rem);
-      line-height: 0.96;
-      letter-spacing: -0.07em;
-      margin: 0 0 22px;
-      max-width: 830px;
-    }
-
-    .hero p {
-      color: #cbd5e1;
-      font-size: 1.15rem;
-      max-width: 670px;
-      margin: 0 0 28px;
+    .hero-copy p {
+      width: 490px;
+      margin: 18px 0 26px;
+      font-size: 17px;
+      line-height: 1.45;
+      color: #101936;
+      font-weight: 500;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 45px;
+    }
+
+    .play {
+      width: 27px;
+      height: 27px;
+      margin-right: 12px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--ink);
+      background: #eef3fb;
     }
 
     .trust-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      color: #cbd5e1;
-      font-size: 0.92rem;
-    }
-
-    .trust-pill {
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 999px;
-      padding: 8px 12px;
-      background: rgba(255,255,255,0.05);
-    }
-
-    .hero-card {
-      background: #ffffff;
-      color: var(--text);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.28);
-    }
-
-    .hero-card h2 {
-      margin: 0 0 14px;
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
-    }
-
-    .mini-preview {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .mini-item {
-      padding: 14px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: #f8fafc;
-    }
-
-    .mini-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .mini-item span {
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    section {
-      padding: 76px 0;
-    }
-
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    .section-title h2 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.05;
-      letter-spacing: -0.055em;
-    }
-
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-      letter-spacing: -0.025em;
-    }
-
-    .card p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .sample {
-      background: #ffffff;
-    }
-
-    .sample-box {
-      background: #0f172a;
-      color: #ffffff;
-      border-radius: 26px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .sample-box h3 {
-      margin: 0 0 18px;
-      font-size: 1.35rem;
-    }
-
-    .sample-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .sample-row {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 16px;
-    }
-
-    .sample-row strong {
-      color: var(--yellow);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .sample-row span {
-      color: #cbd5e1;
-      font-size: 0.95rem;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      counter-reset: step;
-    }
-
-    .step {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      position: relative;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--yellow);
-      color: #111827;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .step h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .request {
-      background:
-        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-    }
-
-    .form-wrap {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .form-side {
-      background: #0f172a;
-      color: #ffffff;
-      border-radius: 26px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-side h2 {
-      margin: 0 0 12px;
-      font-size: 2rem;
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-    .form-side p {
-      color: #cbd5e1;
-      margin: 0 0 20px;
-    }
-
-    .form-side ul {
-      padding-left: 20px;
-      margin: 0;
-      color: #e2e8f0;
-    }
-
-    .form-side li {
-      margin-bottom: 9px;
-    }
-
-    form {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
 
-    .field {
+    .trust {
+      width: 146px;
+      height: 58px;
+      border: 1px solid #dde5f0;
+      border-radius: 12px;
+      background: rgba(255,255,255,.9);
       display: flex;
-      flex-direction: column;
-      gap: 7px;
+      align-items: center;
+      gap: 12px;
+      padding: 0 15px;
+      font-size: 10px;
+      line-height: 1.25;
+      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(8, 20, 49, .04);
     }
 
-    .field.full {
-      grid-column: 1 / -1;
+    .trust svg {
+      width: 31px;
+      min-width: 31px;
+      stroke-width: 2.3;
     }
 
-    label {
+    .trust.yellow svg { stroke: var(--yellow); }
+    .trust.blue svg { stroke: var(--blue); }
+
+    .device-scene {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .phone {
+      position: absolute;
+      left: 741px;
+      top: 43px;
+      width: 257px;
+      height: 510px;
+      border-radius: 46px;
+      transform: rotate(9deg);
+      background: #101010;
+      padding: 9px;
+      box-shadow:
+        16px 26px 34px rgba(20, 18, 15, .30),
+        inset 0 0 0 3px #242424,
+        inset 0 0 0 6px #d9b98d;
+      z-index: 4;
+    }
+
+    .phone-screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 36px;
+      background: #fff;
+      padding: 18px 16px;
+    }
+
+    .status {
+      height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 900;
+      padding: 0 9px 0 12px;
+    }
+
+    .status-icons {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      font-size: 8px;
+    }
+
+    .phone-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 7px 3px 21px;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .phone-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-logo .mark-mini {
+      width: 17px;
+      height: 17px;
+      border-radius: 6px;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      background: #0d58ff;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .phone h3 {
+      margin: 0 0 18px;
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .phone-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .phone-item {
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #edf1f6;
+      font-size: 9.5px;
+      font-weight: 800;
+    }
+
+    .phone-item span {
+      color: #69718a;
+      font-size: 8.5px;
       font-weight: 700;
-      font-size: 0.92rem;
+    }
+
+    .phone-item .dot {
+      width: 15px;
+      height: 15px;
+      margin-right: 9px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: #fff;
+      background: #8c929d;
+      font-size: 7px;
+    }
+
+    .phone-card {
+      height: 76px;
+      margin: 25px 0 15px;
+      border-radius: 11px;
+      background: #f7f9fc;
+      border: 1px solid #edf1f6;
+      padding: 15px;
+    }
+
+    .phone-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .phone-card p {
+      margin: 0;
+      color: #515a72;
+      font-size: 9.5px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .phone .button {
+      width: 100%;
+      height: 46px;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+
+    .float-card {
+      position: absolute;
+      height: 69px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 0 22px 0 17px;
+      border-radius: 34px;
+      background: #fff;
+      box-shadow: 0 18px 36px rgba(13, 30, 76, .13);
+      font-size: 16px;
+      line-height: 1.05;
+      font-weight: 850;
+      z-index: 5;
+    }
+
+    .float-card svg { width: 27px; height: 27px; }
+
+    .ready {
+      left: 984px;
+      top: 63px;
+      width: 185px;
+    }
+
+    .process {
+      left: 1012px;
+      top: 423px;
+      width: 183px;
+    }
+
+    .section-title {
+      margin: 18px 0 13px;
+      text-align: center;
+      font-size: 29px;
+      line-height: 1.1;
+      font-weight: 850;
+      letter-spacing: -1px;
+    }
+
+    .yellow-text { color: #f8bb00; }
+    .blue-text { color: var(--blue); }
+
+    .preview-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 23px;
+      width: 970px;
+      margin: 0 auto;
+    }
+
+    .big-card {
+      height: 231px;
+      padding: 28px 25px;
+      border-radius: 13px;
+      border: 1px solid #e5eaf3;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 15px 30px rgba(13, 24, 54, .10);
+    }
+
+    .circle-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .circle-icon svg { width: 29px; height: 29px; stroke-width: 2.2; }
+    .circle-icon.yellow { background: linear-gradient(160deg, #ffd000, #f7b600); }
+    .circle-icon.blue { background: linear-gradient(160deg, #1263ff, #0048e7); }
+
+    .big-card h3 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      line-height: 1.05;
+      font-weight: 880;
+      letter-spacing: -.4px;
+    }
+
+    .big-card p {
+      margin: 0;
+      color: #273048;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .content-title {
+      margin: 25px 0 15px;
+      text-align: center;
+      font-size: 25px;
+      line-height: 1.05;
+      font-weight: 850;
+      letter-spacing: -.7px;
+    }
+
+    .sample-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 970px;
+      margin: 0 auto;
+    }
+
+    .sample-card {
+      position: relative;
+      height: 177px;
+      border: 1px solid #dee6f2;
+      border-radius: 11px;
+      padding: 25px 24px 20px 104px;
+      background: rgba(255,255,255,.8);
+    }
+
+    .sample-icon {
+      position: absolute;
+      left: 24px;
+      top: 20px;
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #eef4ff;
+      color: var(--blue);
+    }
+
+    .sample-icon.yellow {
+      background: #fff7de;
+      color: var(--yellow);
+    }
+
+    .sample-icon svg { width: 42px; height: 42px; }
+
+    .sample-card h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.1;
+      font-weight: 850;
+    }
+
+    .sample-card p {
+      margin: 0;
+      color: #17213c;
+      font-size: 12.5px;
+      line-height: 1.36;
+      font-weight: 500;
+    }
+
+    .pill {
+      position: absolute;
+      left: 23px;
+      bottom: 20px;
+      min-width: 89px;
+      padding: 5px 7px;
+      border-radius: 4px;
+      background: #e9f1ff;
+      color: var(--blue);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .pill.yellow {
+      color: #e1a400;
+      background: #fff4cb;
+    }
+
+    .how {
+      margin-top: 17px;
+    }
+
+    .how h2,
+    .faq h2 {
+      text-align: center;
+      margin: 0 0 13px;
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 860;
+      letter-spacing: -.7px;
+    }
+
+    .steps {
+      width: 970px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr 40px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .step-card {
+      height: 111px;
+      border: 1px solid #dfe7f2;
+      border-radius: 10px;
+      background: rgba(255,255,255,.8);
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      padding: 18px;
+    }
+
+    .step-icon {
+      width: 49px;
+      height: 49px;
+      min-width: 49px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #dfe7f2;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .step-icon svg { width: 28px; height: 28px; }
+    .sparkle { color: var(--yellow); }
+
+    .step-card h4 {
+      margin: 0 0 7px;
+      font-size: 15px;
+      line-height: 1.15;
+      font-weight: 850;
+    }
+
+    .step-card p {
+      margin: 0;
+      color: #273048;
+      font-size: 11.5px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .arrow {
+      color: var(--blue);
+      font-size: 31px;
+      line-height: 1;
+      text-align: center;
+      transform: translateY(-2px);
+    }
+
+    .control-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 43px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .control-line svg { width: 21px; height: 21px; stroke: #34b759; }
+
+    .form-band {
+      width: 970px;
+      min-height: 258px;
+      margin: 0 auto 20px;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      border: 1px solid #dfe7f2;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,.85);
+    }
+
+    .form-copy {
+      position: relative;
+      padding: 33px 42px;
+      background:
+        radial-gradient(circle at 0 100%, rgba(255, 203, 0, .77), transparent 42%),
+        linear-gradient(100deg, #fff0aa, #fff 65%);
+    }
+
+    .form-copy h2 {
+      margin: 0 0 14px;
+      font-size: 31px;
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+      font-weight: 880;
+    }
+
+    .form-copy p {
+      width: 260px;
+      margin: 0;
+      color: #101936;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .swirl {
+      position: absolute;
+      right: 48px;
+      bottom: 46px;
+      width: 64px;
+      height: 28px;
+      border-bottom: 3px solid #f7bb00;
+      border-radius: 0 0 70px 70px;
+      transform: rotate(11deg);
+    }
+
+    .swirl:after {
+      content: "";
+      position: absolute;
+      right: -6px;
+      bottom: -3px;
+      width: 11px;
+      height: 11px;
+      border-right: 3px solid #f7bb00;
+      border-bottom: 3px solid #f7bb00;
+      transform: rotate(-42deg);
+    }
+
+    form {
+      padding: 21px 32px 17px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 22px;
+      align-content: start;
     }
 
     input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 13px 14px;
-      font-size: 1rem;
-      font-family: inherit;
-      background: #ffffff;
-      color: var(--text);
+    select {
+      height: 34px;
+      border: 1px solid #dce3ef;
+      border-radius: 6px;
+      padding: 0 14px;
+      font: 600 11px/1 Inter, ui-sans-serif, system-ui, sans-serif;
+      color: #59637b;
+      background: #fff;
       outline: none;
     }
 
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 4px rgba(37,99,235,0.10);
-    }
-
-    .form-note {
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin: 16px 0 0;
+    select.wide,
+    .form-submit,
+    .privacy {
+      grid-column: 1 / -1;
     }
 
     .form-submit {
-      margin-top: 20px;
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      flex-wrap: wrap;
+      height: 34px;
+      border: 0;
+      border-radius: 6px;
+      color: #fff;
+      background: linear-gradient(180deg, #155dff, #064cff);
+      font: 800 11px/1 Inter, ui-sans-serif, system-ui, sans-serif;
     }
 
-    .status-message {
-      font-size: 0.95rem;
+    .privacy {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #69718a;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .privacy svg { width: 19px; stroke: #33b95d; }
+
+    .faq {
+      width: 970px;
+      margin: 0 auto;
+    }
+
+    .faq-row {
+      height: 38px;
+      border: 1px solid #dfe7f2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 31px 0 18px;
+      margin-bottom: 4px;
+      background: rgba(255,255,255,.75);
+      box-shadow: 0 5px 14px rgba(5, 17, 45, .03);
+      font-size: 13px;
       font-weight: 700;
     }
 
-    .status-success {
-      color: var(--green);
+    .faq-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
     }
 
-    .status-error {
-      color: var(--danger);
-    }
-
-    .faq {
-      background: #ffffff;
-    }
-
-    .faq-grid {
+    .faq-dot {
+      width: 25px;
+      height: 25px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 850;
     }
 
-    .faq-item {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      background: #ffffff;
+    .faq-row:first-of-type .faq-dot {
+      font-size: 12px;
     }
 
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
+    .cta {
+      width: 970px;
+      height: 99px;
+      margin: 14px auto 16px;
+      border-radius: 13px;
+      display: grid;
+      grid-template-columns: 99px 1fr 245px;
+      align-items: center;
+      padding: 0 34px 0 38px;
+      background:
+        radial-gradient(circle at 0 100%, rgba(255, 203, 0, .75), transparent 29%),
+        linear-gradient(105deg, #fff4b4, #fff 48%, #c8d9ff 100%);
     }
 
-    .faq-item p {
-      color: var(--muted);
-      margin: 0;
+    .cta .bolt-mark {
+      width: 69px;
+      height: 59px;
+      border-radius: 29px 29px 29px 7px;
     }
 
-    .final-cta {
-      background: var(--bg);
-      color: #ffffff;
-      text-align: center;
-      padding: 70px 0;
-    }
+    .cta .bolt-mark svg { width: 31px; }
 
-    .final-cta h2 {
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+    .cta h2 {
+      margin: 0 0 3px;
+      font-size: 27px;
       line-height: 1.05;
-      letter-spacing: -0.055em;
+      letter-spacing: -.9px;
     }
 
-    .final-cta p {
-      color: #cbd5e1;
-      max-width: 720px;
-      margin: 0 auto 24px;
-      font-size: 1.05rem;
+    .cta p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .cta-action {
+      text-align: center;
+    }
+
+    .cta-action .button {
+      width: 202px;
+      height: 40px;
+      border-radius: 8px;
+      margin-bottom: 11px;
+      font-size: 13px;
+    }
+
+    .cta-action span {
+      display: block;
+      color: #69718a;
+      font-size: 11px;
+      font-weight: 600;
     }
 
     footer {
-      background: #020617;
-      color: #94a3b8;
-      padding: 28px 0;
-      font-size: 0.9rem;
+      width: 970px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr .7fr .7fr .8fr 1fr;
+      gap: 28px;
+      align-items: start;
     }
 
-    .footer-inner {
+    .footer-brand {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
       align-items: center;
+      gap: 8px;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 850;
     }
 
-    .disclaimer {
-      max-width: 860px;
+    .footer-brand .bolt-mark {
+      width: 31px;
+      height: 26px;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .form-wrap {
-        grid-template-columns: 1fr;
+    .copyright {
+      margin-top: 25px;
+      color: #8b92a5;
+      font-size: 10.5px;
+      font-weight: 500;
+    }
+
+    .foot-col h5 {
+      margin: 0 0 6px;
+      font-size: 10.5px;
+      font-weight: 850;
+    }
+
+    .foot-col a {
+      display: block;
+      color: #667089;
+      text-decoration: none;
+      font-size: 10.5px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .socials {
+      display: flex;
+      gap: 14px;
+      align-self: end;
+      justify-self: end;
+      padding-bottom: 10px;
+    }
+
+    .social {
+      width: 27px;
+      height: 27px;
+      border: 1px solid #dfe7f2;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 850;
+      color: #07112f;
+      text-decoration: none;
+    }
+
+    svg {
+      display: block;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Launch readiness fixes */
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    form.submitted .form-submit {
+      background: linear-gradient(180deg, #17a34a, #12813c);
+    }
+
+    .success-message {
+      display: none;
+      grid-column: 1 / -1;
+      margin-top: 0;
+      padding: 10px 12px;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      color: #166534;
+      background: #f0fdf4;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    form.submitted .success-message {
+      display: block;
+    }
+
+    .error-message {
+      display: none;
+      grid-column: 1 / -1;
+      margin-top: 0;
+      padding: 10px 12px;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      color: #991b1b;
+      background: #fef2f2;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    form.error .error-message {
+      display: block;
+    }
+
+    @media (max-width: 1180px) {
+      body {
+        min-width: 0;
       }
 
-      .grid-3,
-      .steps,
-      .faq-grid {
-        grid-template-columns: 1fr;
+      .page {
+        width: 100%;
+        max-width: 1440px;
+        padding: 18px 24px 36px;
       }
 
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 16px 0;
+      header,
+      .hero-copy {
+        padding-left: 0;
+        padding-right: 0;
       }
 
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
+      header {
+        padding: 0 18px;
       }
 
       .hero {
-        padding: 60px 0;
+        height: auto;
+        min-height: 0;
+        padding: 44px 30px 40px;
       }
 
-      section {
-        padding: 58px 0;
+      .hero-copy {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: min(650px, 100%);
+      }
+
+      .device-scene {
+        position: relative;
+        height: 520px;
+        margin-top: 20px;
+      }
+
+      .phone {
+        left: 50%;
+        top: 20px;
+        transform: translateX(-20%) rotate(9deg);
+      }
+
+      .ready {
+        left: auto;
+        right: 28px;
+        top: 42px;
+      }
+
+      .process {
+        left: auto;
+        right: 18px;
+        top: 395px;
+      }
+
+      .preview-cards,
+      .sample-cards,
+      .steps,
+      .form-band,
+      .faq,
+      .cta,
+      footer {
+        width: 100%;
+        max-width: 970px;
       }
     }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 16px 18px 32px;
+      }
+
+      header {
+        height: auto;
+        padding: 10px 0 20px;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 24px;
+        margin-left: 0;
+      }
+
+      .brand {
+        font-size: 24px;
+      }
+
+      .hero {
+        border-radius: 20px;
+        padding: 38px 22px 32px;
+      }
+
+      h1 {
+        font-size: clamp(39px, 8vw, 53px);
+        letter-spacing: -1.8px;
+      }
+
+      .hero-copy p {
+        width: 100%;
+        max-width: 520px;
+        font-size: 16px;
+      }
+
+      .trust-row {
+        flex-wrap: wrap;
+      }
+
+      .trust {
+        width: auto;
+        min-width: 150px;
+      }
+
+      .preview-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sample-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+
+      .form-band {
+        grid-template-columns: 1fr;
+      }
+
+      .form-copy p {
+        width: auto;
+      }
+
+      .cta {
+        height: auto;
+        grid-template-columns: 70px 1fr;
+        gap: 18px;
+        padding: 26px;
+      }
+
+      .cta-action {
+        grid-column: 1 / -1;
+        text-align: left;
+      }
+
+      footer {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .socials {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        padding: 10px 12px 28px;
+      }
+
+      header {
+        align-items: flex-start;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .nav-actions {
+        margin-left: auto;
+      }
+
+      .button.small {
+        padding: 0 14px;
+      }
+
+      .hero {
+        margin-top: 6px;
+        padding: 32px 18px 28px;
+      }
+
+      h1 {
+        font-size: 38px;
+        line-height: 1.02;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .trust-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .trust {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .device-scene {
+        height: 450px;
+        overflow: hidden;
+      }
+
+      .phone {
+        width: 220px;
+        height: 438px;
+        left: 50%;
+        top: 5px;
+        transform: translateX(-22%) rotate(8deg);
+        border-radius: 38px;
+      }
+
+      .phone-screen {
+        border-radius: 30px;
+      }
+
+      .float-card {
+        height: auto;
+        min-height: 55px;
+        padding: 10px 14px;
+        font-size: 12px;
+      }
+
+      .ready {
+        right: 0;
+        top: 45px;
+        width: 145px;
+      }
+
+      .process {
+        right: 0;
+        top: 350px;
+        width: 145px;
+      }
+
+      .section-title,
+      .content-title,
+      .how h2,
+      .faq h2 {
+        font-size: 25px;
+        margin-top: 22px;
+      }
+
+      .preview-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .big-card {
+        height: auto;
+        min-height: 190px;
+      }
+
+      .sample-card {
+        height: auto;
+        min-height: 170px;
+        padding: 22px 20px 50px 92px;
+      }
+
+      .sample-icon {
+        left: 18px;
+      }
+
+      .pill {
+        left: 20px;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      select.wide,
+      .form-submit,
+      .privacy {
+        grid-column: auto;
+      }
+
+      .faq-row {
+        height: auto;
+        min-height: 48px;
+        padding: 10px 18px;
+      }
+
+      .faq-left {
+        gap: 14px;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .cta .bolt-mark {
+        width: 58px;
+        height: 50px;
+      }
+
+      .cta-action .button {
+        width: 100%;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    details.faq-row {
+      height: auto;
+      min-height: 38px;
+      display: block;
+      padding: 0;
+    }
+
+    details.faq-row summary {
+      min-height: 38px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 31px 0 18px;
+    }
+
+    details.faq-row summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-row p {
+      margin: 0;
+      padding: 0 31px 14px 75px;
+      color: #667089;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
   </style>
 </head>
-
 <body>
   <div class="page">
-
     <header>
-      <div class="container nav">
-        <a class="brand" href="#">
-          <strong>BrokerPost AI</strong>
-          <span>Content previews for Canadian insurance agencies</span>
-        </a>
-
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#sample">Sample</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#request">Request preview</a>
-          <a href="#request" class="btn btn-primary">Get Free Preview</a>
-        </nav>
+      <div class="brand">
+        <span class="bolt-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-13h-6l1-7z"/></svg>
+        </span>
+        BrokerPost <span>AI</span>
+      </div>
+      <nav>
+        <a href="#how">How It Works</a>
+        <a href="#sample">Sample Output</a>
+        <a href="#faq">FAQ</a>
+        
+      </nav>
+      <div class="nav-actions">
+        <a class="button small primary" href="#request">Get My Free Preview</a>
+        
       </div>
     </header>
 
     <main>
-
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Built for Canadian insurance agencies</div>
-
-            <h1>See what your insurance agency should post next month.</h1>
-
-            <p>
-              BrokerPost AI creates a free 30-day content preview based on your agency,
-              province, services, and local market — so your team has practical post ideas,
-              short-form video concepts, and education angles to review.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#request" class="btn btn-primary">Request My Free Preview</a>
-              <a href="#sample" class="btn btn-secondary">See What You Get</a>
+        <div class="hero-copy">
+          <h1>See what your<br>insurance agency<br>should post next month</h1>
+          <p>Get a free 30-day content plan preview with custom post ideas, a short-form video script, and content opportunities based on your website, services, and local market.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#request">Get My Free Preview</a>
+            <a class="button" href="#sample"><span class="play">▶</span>See Sample Output</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust yellow">
+              <svg viewBox="0 0 36 24"><rect x="2" y="4" width="32" height="7" rx="1"/><rect x="2" y="15" width="32" height="7" rx="1"/><path d="M23 18h6"/></svg>
+              <span>No credit card<br>required</span>
             </div>
-
-            <div class="trust-row">
-              <span class="trust-pill">Canadian insurance-aware</span>
-              <span class="trust-pill">Broker-review-safe</span>
-              <span class="trust-pill">Built for local agencies</span>
+            <div class="trust blue">
+              <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="13"/><path d="M16 7v10l8 3"/></svg>
+              <span>Takes less than<br>2 minutes</span>
+            </div>
+            <div class="trust yellow">
+              <svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m11 16 3 3 7-7"/></svg>
+              <span>Built for<br>insurance agencies</span>
             </div>
           </div>
-
-          <aside class="hero-card" aria-label="Preview example">
-            <h2>Your free preview includes:</h2>
-
-            <div class="mini-preview">
-              <div class="mini-item">
-                <strong>30-day content direction</strong>
-                <span>Practical post ideas built around your services and market.</span>
-              </div>
-
-              <div class="mini-item">
-                <strong>Short-form video script</strong>
-                <span>A simple broker-review-safe video concept your team can adapt.</span>
-              </div>
-
-              <div class="mini-item">
-                <strong>Local education angles</strong>
-                <span>Province-aware topics that help your audience understand insurance better.</span>
-              </div>
-            </div>
-          </aside>
         </div>
-      </section>
 
-      <section id="benefits">
-        <div class="container">
-          <div class="section-title">
-            <h2>Most agencies know they should post. The hard part is knowing what to say.</h2>
-            <p>
-              BrokerPost AI helps turn your agency details into practical content ideas
-              that are easier to review, refine, and publish.
-            </p>
+        <div class="device-scene" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="status"><span>9:41</span><span class="status-icons">▴▴  ̶</span></div>
+              <div class="phone-head">
+                <div class="phone-logo"><span class="mark-mini">↗</span><span>BrokerPost AI</span></div>
+                <span>⌄</span>
+              </div>
+              <h3>Preview Overview</h3>
+              <div class="phone-list">
+                <div class="phone-item"><b><span class="dot">□</span>Post Ideas</b><span>10 ideas</span></div>
+                <div class="phone-item"><b><span class="dot">▷</span>Video Script</b><span>1 script</span></div>
+                <div class="phone-item"><b><span class="dot">◌</span>Content Gap Insight</b><span>1 insight</span></div>
+                <div class="phone-item"><b><span class="dot">✓</span>Campaign Suggestion</b><span>1 campaign</span></div>
+              </div>
+              <div class="phone-card">
+                <strong>Ready for Review</strong>
+                <p>Approve what you like or request changes.</p>
+              </div>
+              <a class="button primary" href="#request">View Preview</a>
+            </div>
           </div>
-
-          <div class="grid-3">
-            <div class="card">
-              <h3>Stop guessing every week</h3>
-              <p>
-                Get a clear starting point for educational posts, FAQs, short videos,
-                and local trust-building content.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Built with Canadian context</h3>
-              <p>
-                The preview considers your province or territory so content does not
-                assume insurance works the same everywhere.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Review before publishing</h3>
-              <p>
-                The system is intentionally semi-automated. Your brokerage reviews
-                anything before it is used publicly.
-              </p>
-            </div>
+          <div class="float-card ready">
+            <svg viewBox="0 0 32 32" style="color:#ffc400;fill:#ffc400;stroke:#fff"><circle cx="16" cy="16" r="16"/><path d="m10 16 4 4 8-9" stroke-width="2.7"/></svg>
+            <span>Your preview<br>is ready</span>
+          </div>
+          <div class="float-card process">
+            <svg viewBox="0 0 32 32" style="color:#ffc400;fill:#ffc400;stroke:#fff"><circle cx="16" cy="16" r="16"/><circle cx="11" cy="14" r="2"/><circle cx="21" cy="14" r="2"/><circle cx="16" cy="11" r="2"/><path d="M8 23c1.5-4 5-5 8-5s6.5 1 8 5"/></svg>
+            <span>One simple<br>process</span>
           </div>
         </div>
       </section>
 
-      <section id="sample" class="sample">
-        <div class="container">
-          <div class="section-title">
-            <h2>What the preview looks like</h2>
-            <p>
-              The goal is not generic social media fluff. The goal is useful, local,
-              broker-review-safe content your agency can actually work with.
-            </p>
-          </div>
-
-          <div class="sample-box">
-            <h3>Sample preview topics</h3>
-
-            <div class="sample-list">
-              <div class="sample-row">
-                <strong>Post idea: “What should homeowners review before renewal?”</strong>
-                <span>A simple educational post that encourages clients to review changes in their home, renovations, valuables, and occupancy with a licensed broker.</span>
-              </div>
-
-              <div class="sample-row">
-                <strong>Short video: “Three insurance questions to ask before buying a home”</strong>
-                <span>A 30–45 second script your agency can adapt for Instagram, LinkedIn, Facebook, or TikTok.</span>
-              </div>
-
-              <div class="sample-row">
-                <strong>Local angle: “Insurance conversations for Vancouver homeowners”</strong>
-                <span>A province-aware content angle that avoids policy advice and encourages proper broker review.</span>
-              </div>
-            </div>
-          </div>
+      <section>
+        <h2 class="section-title">A <span class="yellow-text">free</span> preview built around <span class="blue-text">your agency</span></h2>
+        <div class="preview-cards">
+          <article class="big-card">
+            <div class="circle-icon yellow"><svg viewBox="0 0 32 32"><path d="M5 26l7-2 14-14-5-5L7 19l-2 7z"/><path d="m18 8 5 5"/><path d="M4 28h24"/></svg></div>
+            <h3>3 Custom<br>Post Ideas</h3>
+            <p>Tailored to your services and local audience.</p>
+          </article>
+          <article class="big-card">
+            <div class="circle-icon blue"><svg viewBox="0 0 32 32"><path d="M4 10a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="m22 13 6-4v14l-6-4z"/></svg></div>
+            <h3>1 Short-Form<br>Video Script</h3>
+            <p>A ready-to-record script that saves you time.</p>
+          </article>
+          <article class="big-card">
+            <div class="circle-icon yellow"><svg viewBox="0 0 32 32"><path d="M6 26h20"/><path d="M9 22V12"/><path d="M15 22V6"/><path d="M21 22V10"/><path d="M9 12a2 2 0 0 1 4 0v10"/><path d="M15 6a2 2 0 0 1 4 0v16"/><path d="M21 10a2 2 0 0 1 4 0v12"/></svg></div>
+            <h3>1 Content Gap<br>Insight</h3>
+            <p>See what your audience is looking for but not finding.</p>
+          </article>
+          <article class="big-card">
+            <div class="circle-icon blue"><svg viewBox="0 0 32 32"><rect x="6" y="8" width="20" height="18" rx="3"/><path d="M10 4v7M22 4v7M6 14h20"/><path d="m12 19 3 3 6-6"/></svg></div>
+            <h3>1 Campaign<br>Suggestion</h3>
+            <p>A simple campaign idea to build awareness or trust.</p>
+          </article>
         </div>
       </section>
 
-      <section id="how-it-works">
-        <div class="container">
-          <div class="section-title">
-            <h2>How it works</h2>
-            <p>
-              A simple review-based workflow. You submit your details, we build a preview,
-              and your agency can decide if the content direction is useful.
-            </p>
-          </div>
-
-          <div class="steps">
-            <div class="step">
-              <h3>Submit your agency</h3>
-              <p>Share your agency name, province, services, website, and biggest content challenge.</p>
-            </div>
-
-            <div class="step">
-              <h3>We build the preview</h3>
-              <p>BrokerPost AI creates a draft content preview using Canadian insurance-aware guardrails.</p>
-            </div>
-
-            <div class="step">
-              <h3>Human review</h3>
-              <p>The preview is reviewed before delivery. This keeps the process practical and safer.</p>
-            </div>
-
-            <div class="step">
-              <h3>You decide next steps</h3>
-              <p>Use the sample internally, request changes, or explore a monthly content system.</p>
-            </div>
-          </div>
+      <section id="sample">
+        <h2 class="content-title">See the kind of content <span class="blue-text">your agency</span> could receive</h2>
+        <div class="sample-cards">
+          <article class="sample-card">
+            <div class="sample-icon"><svg viewBox="0 0 32 32" style="fill:#0b55ff;stroke:#0b55ff"><path d="m3 15 13-11 13 11-3 3-3-3v13H9V15l-3 3-3-3z"/><path d="M13 28v-8h6v8" stroke="#fff" stroke-width="2"/></svg></div>
+            <h4>Home Insurance Tip</h4>
+            <p>First-time homeowner? Ask these 5 insurance questions before closing.</p>
+            <span class="pill">Educational Post</span>
+          </article>
+          <article class="sample-card">
+            <div class="sample-icon yellow"><svg viewBox="0 0 32 32" style="fill:#ffc400;stroke:#ffc400"><path d="M10 23h14a6 6 0 0 0 0-12 9 9 0 0 0-17-1 6.5 6.5 0 0 0 3 13z"/><path d="m17 19-3 6h4l-2 5 6-8h-4l2-3z" fill="#ffc400" stroke="#ffc400"/></svg></div>
+            <h4>Storm Prep Reminder</h4>
+            <p>Before heavy rain hits, check your gutters, roof, and deductible.</p>
+            <span class="pill yellow">Seasonal Reminder</span>
+          </article>
+          <article class="sample-card">
+            <div class="sample-icon"><svg viewBox="0 0 32 32" style="fill:#0b55ff;stroke:#0b55ff"><path d="M7 13 10 6h12l3 7 2 1v10h-4v-3H9v3H5V14l2-1z"/><path d="M9 16h4M19 16h4" stroke="#fff" stroke-width="2"/></svg></div>
+            <h4>Auto Insurance Video</h4>
+            <p>Before you renew, make sure your coverage still fits your life.</p>
+            <span class="pill">Short-Form Script</span>
+          </article>
         </div>
       </section>
 
-      <section id="request" class="request">
-        <div class="container form-wrap">
-          <div class="form-side">
-            <h2>Request your free content preview</h2>
-            <p>
-              Submit your agency details and we’ll prepare a free 30-day content preview
-              you can review with your team.
-            </p>
-
-            <ul>
-              <li>Built around your agency and services</li>
-              <li>Province / territory-aware</li>
-              <li>Includes post ideas and a short-form video concept</li>
-              <li>General marketing content only</li>
-              <li>Designed for broker review before publishing</li>
-            </ul>
-          </div>
-
-          <form id="previewForm">
-            <div class="form-grid">
-
-              <div class="field">
-                <label for="fullName">Full Name *</label>
-                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
-              </div>
-
-              <div class="field">
-                <label for="email">Email *</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-
-              <div class="field">
-                <label for="agencyName">Agency Name *</label>
-                <input id="agencyName" name="agencyName" type="text" required />
-              </div>
-
-              <div class="field">
-                <label for="website">Website</label>
-                <input id="website" name="website" type="url" placeholder="https://example.com" />
-              </div>
-
-              <div class="field">
-                <label for="location">Location *</label>
-                <input id="location" name="location" type="text" placeholder="Vancouver" required />
-              </div>
-
-              <div class="field">
-                <label for="province">Province / Territory *</label>
-                <select id="province" name="province" required>
-                  <option value="">Select province / territory</option>
-                  <option value="British Columbia">British Columbia</option>
-                  <option value="Alberta">Alberta</option>
-                  <option value="Saskatchewan">Saskatchewan</option>
-                  <option value="Manitoba">Manitoba</option>
-                  <option value="Ontario">Ontario</option>
-                  <option value="Quebec">Quebec</option>
-                  <option value="New Brunswick">New Brunswick</option>
-                  <option value="Nova Scotia">Nova Scotia</option>
-                  <option value="Prince Edward Island">Prince Edward Island</option>
-                  <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-                  <option value="Yukon">Yukon</option>
-                  <option value="Northwest Territories">Northwest Territories</option>
-                  <option value="Nunavut">Nunavut</option>
-                </select>
-              </div>
-
-              <div class="field full">
-                <label for="mainServices">Main Services *</label>
-                <input
-                  id="mainServices"
-                  name="mainServices"
-                  type="text"
-                  placeholder="Home Insurance, Auto Insurance, Business Insurance"
-                  required
-                />
-              </div>
-
-              <div class="field full">
-                <label for="biggestContentChallenge">Biggest Content Challenge *</label>
-                <textarea
-                  id="biggestContentChallenge"
-                  name="biggestContentChallenge"
-                  placeholder="Example: We do not know what to post consistently."
-                  required
-                ></textarea>
-              </div>
-
-              <div class="field full">
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" />
-              </div>
-
-            </div>
-
-            <p class="form-note">
-              BrokerPost AI creates general marketing content only. It does not provide insurance,
-              legal, claims, compliance, or policy advice. All content should be reviewed by a licensed
-              broker or qualified representative before publishing.
-            </p>
-
-            <div class="form-submit">
-              <button id="submitButton" class="btn btn-primary" type="submit">
-                Request Free Preview
-              </button>
-
-              <span id="formStatus" class="status-message" aria-live="polite"></span>
-            </div>
-          </form>
+      <section class="how" id="how">
+        <h2>How it works</h2>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-icon"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="20" rx="2"/><path d="M9 12h14M9 17h6M21 21h2"/></svg></div>
+            <div><h4>Share your agency<br>information</h4><p>Tell us about your agency, services, and audience.</p></div>
+          </article>
+          <div class="arrow">→</div>
+          <article class="step-card">
+            <div class="step-icon sparkle"><svg viewBox="0 0 32 32" style="fill:#ffc400;stroke:#ffc400"><path d="M16 3c2 8 5 11 13 13-8 2-11 5-13 13-2-8-5-11-13-13 8-2 11-5 13-13z"/><path d="M25 3v6M22 6h6"/></svg></div>
+            <div><h4>We create your<br>preview</h4><p>Our AI builds a custom 30-day content plan.</p></div>
+          </article>
+          <div class="arrow">→</div>
+          <article class="step-card">
+            <div class="step-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="m10 16 4 4 8-8"/></svg></div>
+            <div><h4>You review &amp; decide</h4><p>Approve what you like, request changes, or download and go.</p></div>
+          </article>
+        </div>
+        <div class="control-line">
+          <svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>
+          <span>AI does the heavy lifting. You stay in control.</span>
         </div>
       </section>
 
-      <section id="faq" class="faq">
-        <div class="container">
-          <div class="section-title">
-            <h2>Questions before you request a preview</h2>
-            <p>
-              BrokerPost AI is built as a practical marketing support system, not a replacement
-              for licensed broker review.
-            </p>
-          </div>
-
-          <div class="faq-grid">
-            <div class="faq-item">
-              <h3>Is this insurance advice?</h3>
-              <p>
-                No. BrokerPost AI creates general marketing content ideas. It does not provide
-                insurance advice, policy interpretation, claims advice, legal advice, or compliance guarantees.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Do we need to review the content?</h3>
-              <p>
-                Yes. Your agency should review and approve anything before publishing, especially
-                where province-specific insurance rules or product wording may apply.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Why does province or territory matter?</h3>
-              <p>
-                Insurance structures can vary across Canada, especially auto insurance. The preview
-                uses the province or territory to keep the content direction more cautious and relevant.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>What happens after the free preview?</h3>
-              <p>
-                You can use the sample internally, request changes, or discuss a monthly content workflow
-                for ongoing posts, scripts, and campaign ideas.
-              </p>
-            </div>
-          </div>
+      <section class="form-band" id="request">
+        <div class="form-copy">
+          <h2>Request your <span class="yellow-text">free</span><br>content preview</h2>
+          <p>Share your agency details and we’ll send back a simple preview of what you could post next month.</p>
+          <span class="swirl" aria-hidden="true"></span>
         </div>
+
+        <form id="preview-form">
+          <input name="fullName" placeholder="Full Name" autocomplete="name" required />
+          <input name="email" type="email" placeholder="Email Address" autocomplete="email" required />
+
+          <input name="agencyName" placeholder="Agency Name" required />
+          <input name="website" type="url" placeholder="Website" />
+
+          <input name="location" placeholder="Location" required />
+          <select name="province" required>
+            <option value="">Province / Territory</option>
+            <option value="British Columbia">British Columbia</option>
+            <option value="Alberta">Alberta</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="Ontario">Ontario</option>
+            <option value="Quebec">Quebec</option>
+            <option value="New Brunswick">New Brunswick</option>
+            <option value="Nova Scotia">Nova Scotia</option>
+            <option value="Prince Edward Island">Prince Edward Island</option>
+            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+            <option value="Yukon">Yukon</option>
+            <option value="Northwest Territories">Northwest Territories</option>
+            <option value="Nunavut">Nunavut</option>
+          </select>
+
+          <select name="mainServices" required>
+            <option value="">Main Services</option>
+            <option>Home Insurance</option>
+            <option>Auto Insurance</option>
+            <option>Business Insurance</option>
+            <option>Life Insurance</option>
+            <option>Condo / Tenant Insurance</option>
+            <option>Multiple Services</option>
+          </select>
+          <input name="phone" type="tel" placeholder="Phone Optional" autocomplete="tel" />
+
+          <select class="wide" name="biggestContentChallenge" required>
+            <option value="">Biggest Content Challenge</option>
+            <option>We do not know what to post</option>
+            <option>We do not have time</option>
+            <option>We need better video ideas</option>
+            <option>Our content feels too generic</option>
+            <option>We want to build more local trust</option>
+            <option>We are not posting consistently</option>
+          </select>
+
+          <button class="form-submit" id="submit-button" type="submit">Send My Free Preview</button>
+
+          <div class="privacy"><svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>General marketing content only. Review before publishing.</div>
+
+          <p class="success-message" id="success-message">Thanks — your request was sent. We’ll review your details and prepare your preview.</p>
+          <p class="error-message" id="error-message">Something went wrong. Please try again.</p>
+        </form>
       </section>
 
-      <section class="final-cta">
-        <div class="container">
-          <h2>Ready to see what your agency could post next?</h2>
-          <p>
-            Request a free BrokerPost AI content preview and get a practical starting point
-            for your agency’s next month of marketing.
-          </p>
-          <a href="#request" class="btn btn-primary">Get My Free Preview</a>
-        </div>
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <details class="faq-row">
+          <summary><span class="faq-left"><span class="faq-dot">1</span><span>Is this only for insurance agencies?</span></span><span>⌄</span></summary>
+          <p>Yes. This first version is designed specifically for independent insurance brokers and local insurance agencies.</p>
+        </details>
+
+        <details class="faq-row">
+          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Do you provide insurance advice?</span></span><span>⌄</span></summary>
+          <p>No. BrokerPost AI creates general marketing content ideas only. Specific coverage, claims, legal, or policy details should always be reviewed by a licensed broker.</p>
+        </details>
+
+        <details class="faq-row">
+          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Can we edit the content?</span></span><span>⌄</span></summary>
+          <p>Yes. The preview is designed to give your agency a strong starting point. You stay in control of what gets approved and posted.</p>
+        </details>
       </section>
 
+      <section class="cta">
+        <span class="bolt-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-13h-6l1-7z"/></svg>
+        </span>
+        <div>
+          <h2>Slips by happen. Content shouldn’t.</h2>
+          <p>Get a custom 30-day content preview for your agency.</p>
+        </div>
+        <div class="cta-action">
+          <a class="button primary" href="#request">Get My Free Preview</a>
+          <span>No credit card required</span>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <div class="container footer-inner">
-        <div>
-          <strong>BrokerPost AI</strong><br />
-          Content previews for Canadian insurance agencies.
+      <div>
+        <div class="footer-brand">
+          <span class="bolt-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-13h-6l1-7z"/></svg>
+          </span>
+          BrokerPost <span style="font-weight:500">AI</span>
         </div>
-
-        <div class="disclaimer">
-          General marketing content only. BrokerPost AI does not provide insurance, legal,
-          claims, compliance, or policy advice. Review all content before publishing.
-        </div>
+        <div class="copyright">© 2026 BrokerPost AI. All rights reserved.</div>
       </div>
+      <div class="foot-col">
+        <h5>Useful Links</h5>
+        <a href="#how">How It Works</a>
+        <a href="#sample">Sample Output</a>
+        <a href="#faq">FAQ</a>
+        
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="mailto:hello@brokerpostai.com">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="socials"><a class="social" href="#">in</a><a class="social" href="#">f</a></div>
     </footer>
-
   </div>
 
   <script>
     const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
-    const form = document.getElementById("previewForm");
-    const statusEl = document.getElementById("formStatus");
-    const submitButton = document.getElementById("submitButton");
+    const form = document.getElementById('preview-form');
+    const submitButton = document.getElementById('submit-button');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+    function hideMessages() {
+      if (successMessage) successMessage.style.display = 'none';
+      if (errorMessage) errorMessage.style.display = 'none';
+      if (form) form.classList.remove('submitted', 'error');
+    }
 
-      statusEl.textContent = "";
-      statusEl.className = "status-message";
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
+    if (form) {
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        hideMessages();
 
-      const formData = new FormData(form);
+        if (!SCRIPT_URL || SCRIPT_URL.includes('PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE')) {
+          if (errorMessage) {
+            errorMessage.textContent = 'Form is not connected yet. Add your Google Apps Script Web App URL.';
+            errorMessage.style.display = 'block';
+          }
+          return;
+        }
 
-      const payload = {
-        fullName: formData.get("fullName") || "",
-        agencyName: formData.get("agencyName") || "",
-        website: formData.get("website") || "",
-        location: formData.get("location") || "",
-        province: formData.get("province") || "",
-        mainServices: formData.get("mainServices") || "",
-        biggestContentChallenge: formData.get("biggestContentChallenge") || "",
-        email: formData.get("email") || "",
-        phone: formData.get("phone") || "",
-        source: "BrokerPost AI Website",
-        submittedAt: new Date().toISOString()
-      };
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
 
-      try {
-        await fetch(SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8"
-          },
-          body: JSON.stringify(payload)
-        });
+        const formData = new FormData(form);
 
-        form.reset();
+        const payload = {
+          fullName: formData.get('fullName') || '',
+          agencyName: formData.get('agencyName') || '',
+          website: formData.get('website') || '',
+          location: formData.get('location') || '',
+          province: formData.get('province') || '',
+          mainServices: formData.get('mainServices') || '',
+          biggestContentChallenge: formData.get('biggestContentChallenge') || '',
+          email: formData.get('email') || '',
+          phone: formData.get('phone') || '',
+          source: 'BrokerPost AI Website',
+          submittedAt: new Date().toISOString()
+        };
 
-        statusEl.textContent = "Request sent. We’ll review your details and prepare your preview.";
-        statusEl.className = "status-message status-success";
+        try {
+          await fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          });
 
-      } catch (error) {
-        statusEl.textContent = "Something went wrong. Please try again or contact us directly.";
-        statusEl.className = "status-message status-error";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Request Free Preview";
-      }
-    });
+          form.reset();
+          form.classList.add('submitted');
+          if (successMessage) successMessage.style.display = 'block';
+        } catch (error) {
+          form.classList.add('error');
+          if (errorMessage) {
+            errorMessage.textContent = 'Something went wrong. Please try again.';
+            errorMessage.style.display = 'block';
+          }
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send My Free Preview';
+        }
+      });
+    }
   </script>
+
 </body>
 </html>
