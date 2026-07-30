@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <title>BrokerPost AI | Monthly Marketing for Canadian Insurance Brokerages</title>
   <meta name="description" content="BrokerPost plans and prepares human-reviewed monthly marketing content for independent Canadian insurance brokerages—built around each brokerage, province, services, and local market." />
   <meta property="og:title" content="BrokerPost AI | Monthly Marketing for Canadian Insurance Brokerages" />
@@ -17,6 +20,7 @@
       --blue: #0b55ff;
       --blue-2: #0f63ff;
       --yellow: #ffc400;
+      --green: #2fb46e;
       --line: #dce3ef;
       --soft: #f7f9fc;
     }
@@ -1497,6 +1501,285 @@
       }
     }
 
+
+
+    /* Final UI refinement — July 2026 */
+    .trust.human svg {
+      stroke: var(--green);
+    }
+
+    .phone-logo {
+      gap: 6px;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .phone-brand-mark {
+      width: 18px;
+      height: 16px;
+      min-width: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px 8px 8px 2px;
+      background: linear-gradient(135deg, #ffcb00, #f5ae00);
+      box-shadow: inset 0 -1px rgba(0,0,0,.08);
+    }
+
+    .phone-brand-mark svg {
+      width: 9px;
+      height: 9px;
+      fill: #fff;
+      stroke: none;
+    }
+
+    .phone-brand-name {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 3px;
+      color: var(--ink);
+      font-size: 9.5px;
+      line-height: 1;
+      letter-spacing: -.25px;
+    }
+
+    .phone-brand-name strong {
+      font-weight: 900;
+    }
+
+    .phone-brand-name span {
+      font-weight: 600;
+    }
+
+    .preview-cards,
+    .sample-cards,
+    .steps {
+      align-items: stretch;
+    }
+
+    .big-card {
+      height: auto;
+      min-height: 278px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px 23px;
+      overflow: hidden;
+    }
+
+    .big-card .circle-icon {
+      flex: 0 0 auto;
+      margin-bottom: 16px;
+    }
+
+    .big-card h3 {
+      margin-bottom: 11px;
+      font-size: 18px;
+    }
+
+    .big-card p,
+    .sample-card p,
+    .step-card p,
+    .premium-item p {
+      overflow-wrap: anywhere;
+    }
+
+    .sample-card {
+      height: auto;
+      min-height: 190px;
+      padding-bottom: 48px;
+      overflow: hidden;
+    }
+
+    .step-card {
+      height: auto;
+      min-height: 118px;
+      overflow: hidden;
+    }
+
+    .preview-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      min-height: 54px;
+      padding: 14px 24px;
+      color: var(--ink);
+      background: linear-gradient(90deg, #fff9de, #fff 50%, #eef4ff);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .preview-note strong {
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .customer-proof {
+      height: auto;
+      min-height: 50px;
+      padding: 8px 20px;
+    }
+
+    .customer-proof p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 650;
+      text-align: center;
+    }
+
+    .customer-proof strong {
+      font-weight: 900;
+    }
+
+    .faq {
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+
+    details.faq-menu {
+      width: 100%;
+      border: 1px solid #dce5f4;
+      border-radius: 16px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 10px 28px rgba(5, 17, 45, .06);
+      overflow: hidden;
+    }
+
+    details.faq-menu > summary {
+      min-height: 70px;
+      padding: 0 22px 0 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      cursor: pointer;
+      list-style: none;
+      background: linear-gradient(90deg, #fff9dc 0%, #fff 48%, #eef4ff 100%);
+    }
+
+    details.faq-menu > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-menu-title {
+      color: var(--ink);
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -.7px;
+    }
+
+    .faq-menu-action {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .faq-menu-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--blue);
+      font-size: 24px;
+      line-height: 1;
+      transition: transform .2s ease;
+    }
+
+    details.faq-menu[open] .faq-menu-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-list {
+      padding: 12px;
+      border-top: 1px solid #e5eaf3;
+      background: #f9fbff;
+    }
+
+    details.faq-row {
+      margin-bottom: 7px;
+      background: #fff;
+      box-shadow: none;
+    }
+
+    details.faq-row:last-child {
+      margin-bottom: 0;
+    }
+
+    details.faq-row summary {
+      min-height: 48px;
+    }
+
+    .faq-chevron {
+      color: var(--blue);
+      font-size: 16px;
+      transition: transform .2s ease;
+    }
+
+    details.faq-row[open] .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 900px) {
+      .big-card {
+        min-height: 245px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .big-card,
+      .sample-card,
+      .step-card {
+        min-height: 0;
+      }
+
+      .preview-note {
+        display: block;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .customer-proof {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .customer-proof p {
+        text-align: left;
+        font-size: 13px;
+      }
+
+      details.faq-menu > summary {
+        min-height: 64px;
+        padding: 14px 16px;
+      }
+
+      .faq-menu-title {
+        font-size: 20px;
+      }
+
+      .faq-menu-action > span:first-child {
+        display: none;
+      }
+
+      details.faq-row summary {
+        padding: 9px 14px;
+      }
+
+      details.faq-row p {
+        padding: 0 18px 14px 54px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1523,14 +1806,14 @@
       <section class="hero">
         <div class="hero-copy">
           <span class="eyebrow">Built for independent Canadian insurance brokerages</span>
-          <h1>Your brokerage’s<br>monthly marketing—<br>planned and written</h1>
+          <h1>Your brokerage’s<br>monthly marketing<br>planned and written</h1>
           <p>BrokerPost creates agency-specific marketing direction and human-reviewed content built around your services, province, and local market—ready for your brokerage to review.</p>
           <div class="hero-actions">
             <a class="button primary" href="#request">Request My Free Preview</a>
             <a class="button" href="#included"><span class="play">▶</span>See the Monthly System</a>
           </div>
           <div class="trust-row">
-            <div class="trust yellow">
+            <div class="trust human">
               <svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m11 16 3 3 7-7"/></svg>
               <span>Human quality<br>review</span>
             </div>
@@ -1550,7 +1833,12 @@
             <div class="phone-screen">
               <div class="status"><span>9:41</span><span class="status-icons">▴▴  ̶</span></div>
               <div class="phone-head">
-                <div class="phone-logo"><span class="mark-mini">↗</span><span>BrokerPost AI</span></div>
+                <div class="phone-logo">
+                  <span class="phone-brand-mark">
+                    <svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-13h-6l1-7z"/></svg>
+                  </span>
+                  <span class="phone-brand-name"><strong>BrokerPost</strong><span>AI</span></span>
+                </div>
                 <span>⌄</span>
               </div>
               <h3>Agency Marketing Preview</h3>
@@ -1572,7 +1860,7 @@
             <span>Your strategy<br>takes shape</span>
           </div>
           <div class="float-card process">
-            <svg viewBox="0 0 32 32" style="color:#ffc400;fill:#ffc400;stroke:#fff"><circle cx="16" cy="16" r="16"/><circle cx="11" cy="14" r="2"/><circle cx="21" cy="14" r="2"/><circle cx="16" cy="11" r="2"/><path d="M8 23c1.5-4 5-5 8-5s6.5 1 8 5"/></svg>
+            <svg viewBox="0 0 32 32" style="color:#2fb46e;fill:#2fb46e;stroke:#fff"><circle cx="16" cy="16" r="16"/><circle cx="11" cy="14" r="2"/><circle cx="21" cy="14" r="2"/><circle cx="16" cy="11" r="2"/><path d="M8 23c1.5-4 5-5 8-5s6.5 1 8 5"/></svg>
             <span>One focused<br>monthly system</span>
           </div>
         </div>
@@ -1602,7 +1890,7 @@
             <p>Two social posts, one short-form video script, and one Google Business Profile post.</p>
           </article>
         </div>
-        <div class="preview-note">The free preview demonstrates BrokerPost’s strategy and fit. It is intentionally not a complete monthly content package.</div>
+        <div class="preview-note"><strong>A focused preview, <span class="blue-text">not the full monthly package.</span></strong><span> It shows BrokerPost’s strategy and fit before you decide what comes next.</span></div>
       </section>
 
       <section>
@@ -1647,9 +1935,9 @@
             <div><h4>Review the fit and<br>join BrokerPost</h4><p>Qualified brokerages can move into the complete monthly system.</p></div>
           </article>
         </div>
-        <div class="control-line">
+        <div class="control-line customer-proof">
           <svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>
-          <span>BrokerPost does the planning and preparation. Your brokerage keeps final approval.</span>
+          <p><strong>BrokerPost handles the planning and preparation.</strong> Your brokerage keeps <span class="blue-text">final approval.</span></p>
         </div>
       </section>
 
@@ -1761,56 +2049,62 @@
       </section>
 
       <section class="faq" id="faq">
-        <h2>Frequently asked questions</h2>
+        <details class="faq-menu">
+          <summary>
+            <span class="faq-menu-title">Frequently asked questions</span>
+            <span class="faq-menu-action"><span>View answers</span><span class="faq-menu-icon">+</span></span>
+          </summary>
+          <div class="faq-list">
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">1</span><span>Who is BrokerPost built for?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>BrokerPost is built for independent Canadian insurance brokerages that want consistent marketing but do not want to plan and write everything internally or manage another do-it-yourself platform.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">1</span><span>Who is BrokerPost built for?</span></span><span>⌄</span></summary>
-          <p>BrokerPost is built for independent Canadian insurance brokerages that want consistent marketing but do not want to plan and write everything internally or manage another do-it-yourself platform.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is this just AI-generated content?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>No. AI supports production, but BrokerPost supplies the structured agency profile, monthly direction, province-conscious rules, content coordination, quality review, and organized delivery.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is this just AI-generated content?</span></span><span>⌄</span></summary>
-          <p>No. AI supports production, but BrokerPost supplies the structured agency profile, monthly direction, province-conscious rules, content coordination, quality review, and organized delivery.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Do you provide insurance advice?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>No. BrokerPost provides general marketing content and planning services. We do not provide coverage, policy, claims, legal, or personalized insurance advice.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Do you provide insurance advice?</span></span><span>⌄</span></summary>
-          <p>No. BrokerPost provides general marketing content and planning services. We do not provide coverage, policy, claims, legal, or personalized insurance advice.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is the content compliance-approved?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>No. Content is designed to be cautious and ready for brokerage review, but the brokerage remains responsible for confirming all agency-specific, insurer-specific, licensing, advertising, and regulatory requirements before publication.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is the content compliance-approved?</span></span><span>⌄</span></summary>
-          <p>No. Content is designed to be cautious and ready for brokerage review, but the brokerage remains responsible for confirming all agency-specific, insurer-specific, licensing, advertising, and regulatory requirements before publication.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Does BrokerPost publish the content?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>Not in the standard package. Your team receives ready-to-review content and a clear publishing calendar. Publishing and account management are not included at launch.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Does BrokerPost publish the content?</span></span><span>⌄</span></summary>
-          <p>Not in the standard package. Your team receives ready-to-review content and a clear publishing calendar. Publishing and account management are not included at launch.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Do you guarantee leads or sales?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>No. BrokerPost provides a consistent marketing process and prepared content. Results also depend on distribution, audience, offer, reputation, follow-up, and market conditions.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Do you guarantee leads or sales?</span></span><span>⌄</span></summary>
-          <p>No. BrokerPost provides a consistent marketing process and prepared content. Results also depend on distribution, audience, offer, reputation, follow-up, and market conditions.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>What does BrokerPost Premium cost?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>Standard pricing begins at $750 CAD per month, plus a one-time onboarding fee. Custom requirements, extra brands, or distinct additional locations may require separate pricing.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>What does BrokerPost Premium cost?</span></span><span>⌄</span></summary>
-          <p>Standard pricing begins at $750 CAD per month, plus a one-time onboarding fee. Custom requirements, extra brands, or distinct additional locations may require separate pricing.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Why is there an onboarding fee?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>Onboarding covers the review of your brokerage, services, audience, voice, restrictions, priorities, website, and initial Agency Marketing Blueprint that guides future packages.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Why is there an onboarding fee?</span></span><span>⌄</span></summary>
-          <p>Onboarding covers the review of your brokerage, services, audience, voice, restrictions, priorities, website, and initial Agency Marketing Blueprint that guides future packages.</p>
-        </details>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is there a minimum commitment?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>The initial service term is three months. This provides enough time to complete onboarding, deliver multiple marketing cycles, and determine whether the system is a strong fit.</p>
+            </details>
 
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is there a minimum commitment?</span></span><span>⌄</span></summary>
-          <p>The initial service term is three months. This provides enough time to complete onboarding, deliver multiple marketing cycles, and determine whether the system is a strong fit.</p>
-        </details>
-
-        <details class="faq-row">
-          <summary><span class="faq-left"><span class="faq-dot">+</span><span>Can we request changes?</span></span><span>⌄</span></summary>
-          <p>BrokerPost Premium includes one consolidated revision round for reasonable tone changes, factual corrections, and minor content adjustments. Additional rounds or new campaign directions are priced separately.</p>
+            <details class="faq-row">
+              <summary><span class="faq-left"><span class="faq-dot">+</span><span>Can we request changes?</span></span><span class="faq-chevron">⌄</span></summary>
+              <p>BrokerPost Premium includes one consolidated revision round for reasonable tone changes, factual corrections, and minor content adjustments. Additional rounds or new campaign directions are priced separately.</p>
+            </details>
+          </div>
         </details>
       </section>
 
@@ -1928,6 +2222,17 @@
         }
       });
     }
+  </script>
+
+  <script>
+    document.querySelectorAll('.faq-list details.faq-row').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) return;
+        document.querySelectorAll('.faq-list details.faq-row').forEach((other) => {
+          if (other !== item) other.removeAttribute('open');
+        });
+      });
+    });
   </script>
 </body>
 </html>
