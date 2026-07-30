@@ -573,6 +573,7 @@
     }
 
     .step-icon svg { width: 28px; height: 28px; }
+    .step-icon.green svg { stroke: #34b759; }
     .sparkle { color: var(--yellow); }
 
     .step-card h4 {
@@ -595,7 +596,12 @@
       font-size: 31px;
       line-height: 1;
       text-align: center;
-      transform: translateY(-2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      height: 100%;
+      transform: none;
     }
 
     .control-line {
@@ -1898,7 +1904,7 @@
         <h2>How it works</h2>
         <div class="steps">
           <article class="step-card">
-            <div class="step-icon"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="20" rx="2"/><path d="M9 12h14M9 17h6M21 21h2"/></svg></div>
+            <div class="step-icon green"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="20" rx="2"/><path d="M9 12h14M9 17h6M21 21h2"/></svg></div>
             <div><h4>Tell us about your<br>brokerage</h4><p>Share your services, location, priorities, and current marketing challenge.</p></div>
           </article>
           <div class="arrow">→</div>
@@ -1908,7 +1914,7 @@
           </article>
           <div class="arrow">→</div>
           <article class="step-card">
-            <div class="step-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="m10 16 4 4 8-8"/></svg></div>
+            <div class="step-icon green"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="m10 16 4 4 8-8"/></svg></div>
             <div><h4>Review the fit and<br>join BrokerPost</h4><p>Qualified brokerages can move into the complete monthly system.</p></div>
           </article>
         </div>
