@@ -2039,7 +2039,7 @@
 
           <div class="privacy"><svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>General marketing content only. Brokerage review is required before publication.</div>
 
-          <p class="success-message" id="success-message" aria-live="polite">Thanks—your request was received. A confirmation email is on the way. If it does not arrive within 10 minutes, email hello@brokerpostai.com.</p>
+          <p class="success-message" id="success-message" aria-live="polite">Thanks—your request was sent successfully. We’ll review your brokerage and contact you shortly.</p>
           <p class="error-message" id="error-message" aria-live="assertive">We could not confirm that your request was received. Your information is still on this page—please try again or email hello@brokerpostai.com.</p>
         </form>
       </section>
@@ -2174,69 +2174,6 @@
       );
     }
 
-    function wait(milliseconds) {
-      return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
-    }
-
-    function requestSubmissionReceipt(submissionToken) {
-      return new Promise((resolve, reject) => {
-        const callbackName = 'brokerPostReceipt_' + submissionToken.replace(/[^A-Za-z0-9_]/g, '') + '_' + Date.now();
-        const script = document.createElement('script');
-        const timeout = window.setTimeout(() => {
-          cleanup();
-          reject(new Error('Receipt check timed out.'));
-        }, 6000);
-
-        function cleanup() {
-          window.clearTimeout(timeout);
-          script.remove();
-
-          try {
-            delete window[callbackName];
-          } catch (error) {
-            window[callbackName] = undefined;
-          }
-        }
-
-        window[callbackName] = (response) => {
-          cleanup();
-          resolve(response || {});
-        };
-
-        script.onerror = () => {
-          cleanup();
-          reject(new Error('Receipt check failed.'));
-        };
-
-        script.src = SCRIPT_URL +
-          '?action=submissionStatus' +
-          '&submissionToken=' + encodeURIComponent(submissionToken) +
-          '&callback=' + encodeURIComponent(callbackName) +
-          '&_=' + Date.now();
-        document.head.appendChild(script);
-      });
-    }
-
-    async function confirmSubmissionReceipt(submissionToken) {
-      let lastError = null;
-
-      for (let attempt = 0; attempt < 4; attempt += 1) {
-        try {
-          const receipt = await requestSubmissionReceipt(submissionToken);
-
-          if (receipt.status === 'received' && receipt.leadId) {
-            return receipt;
-          }
-        } catch (error) {
-          lastError = error;
-        }
-
-        await wait(1200);
-      }
-
-      throw lastError || new Error('Submission receipt was not confirmed.');
-    }
-
     if (form) {
       form.addEventListener('submit', async function (event) {
         event.preventDefault();
@@ -2281,8 +2218,6 @@
             headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify(payload)
           });
-
-          await confirmSubmissionReceipt(submissionToken);
 
           form.reset();
           delete form.dataset.submissionToken;
