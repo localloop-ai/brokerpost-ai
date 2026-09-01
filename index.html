@@ -1447,6 +1447,16 @@
       line-height: 1.45;
     }
 
+    .hp-field {
+      position: absolute !important;
+      left: -10000px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
     .pricing-note {
       color: #667089;
       font-size: 11px;
@@ -1960,13 +1970,17 @@
         </div>
 
         <form id="preview-form">
-          <input name="fullName" placeholder="Full Name" autocomplete="name" required />
-          <input name="email" type="email" placeholder="Business Email Address" autocomplete="email" required />
+          <div class="hp-field" aria-hidden="true">
+            <label for="fax-number">Leave this field empty</label>
+            <input id="fax-number" name="faxNumber" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <input name="fullName" placeholder="Full Name" autocomplete="name" maxlength="120" required />
+          <input name="email" type="email" placeholder="Business Email Address" autocomplete="email" maxlength="254" required />
 
-          <input name="agencyName" placeholder="Brokerage / Agency Name" required />
-          <input name="website" type="url" placeholder="Website" required />
+          <input name="agencyName" placeholder="Brokerage / Agency Name" maxlength="160" required />
+          <input name="website" type="url" placeholder="Website" maxlength="300" required />
 
-          <input name="location" placeholder="City / Service Area" required />
+          <input name="location" placeholder="City / Service Area" maxlength="160" required />
           <select name="province" required>
             <option value="">Province / Territory</option>
             <option value="British Columbia">British Columbia</option>
@@ -1994,7 +2008,7 @@
             <option>Multiple P&amp;C Services</option>
             <option>Other Insurance Services</option>
           </select>
-          <input name="phone" type="tel" placeholder="Phone Optional" autocomplete="tel" />
+          <input name="phone" type="tel" placeholder="Phone Optional" autocomplete="tel" maxlength="60" />
 
           <select class="wide" name="biggestContentChallenge" required>
             <option value="">Biggest Marketing Challenge</option>
@@ -2025,8 +2039,8 @@
 
           <div class="privacy"><svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>General marketing content only. Brokerage review is required before publication.</div>
 
-          <p class="success-message" id="success-message">Thanks—your request was sent. We’ll review your brokerage and contact you about the preview.</p>
-          <p class="error-message" id="error-message">Something went wrong. Please try again.</p>
+          <p class="success-message" id="success-message" aria-live="polite">Thanks—your request was received. A confirmation email is on the way. If it does not arrive within 10 minutes, email hello@brokerpostai.com.</p>
+          <p class="error-message" id="error-message" aria-live="assertive">We could not confirm that your request was received. Your information is still on this page—please try again or email hello@brokerpostai.com.</p>
         </form>
       </section>
 
@@ -2148,12 +2162,87 @@
       if (form) form.classList.remove('submitted', 'error');
     }
 
+    function createSubmissionToken() {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        return window.crypto.randomUUID().replace(/-/g, '');
+      }
+
+      return (
+        Date.now().toString(36) +
+        Math.random().toString(36).slice(2) +
+        Math.random().toString(36).slice(2)
+      );
+    }
+
+    function wait(milliseconds) {
+      return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+    }
+
+    function requestSubmissionReceipt(submissionToken) {
+      return new Promise((resolve, reject) => {
+        const callbackName = 'brokerPostReceipt_' + submissionToken.replace(/[^A-Za-z0-9_]/g, '') + '_' + Date.now();
+        const script = document.createElement('script');
+        const timeout = window.setTimeout(() => {
+          cleanup();
+          reject(new Error('Receipt check timed out.'));
+        }, 6000);
+
+        function cleanup() {
+          window.clearTimeout(timeout);
+          script.remove();
+
+          try {
+            delete window[callbackName];
+          } catch (error) {
+            window[callbackName] = undefined;
+          }
+        }
+
+        window[callbackName] = (response) => {
+          cleanup();
+          resolve(response || {});
+        };
+
+        script.onerror = () => {
+          cleanup();
+          reject(new Error('Receipt check failed.'));
+        };
+
+        script.src = SCRIPT_URL +
+          '?action=submissionStatus' +
+          '&submissionToken=' + encodeURIComponent(submissionToken) +
+          '&callback=' + encodeURIComponent(callbackName) +
+          '&_=' + Date.now();
+        document.head.appendChild(script);
+      });
+    }
+
+    async function confirmSubmissionReceipt(submissionToken) {
+      let lastError = null;
+
+      for (let attempt = 0; attempt < 4; attempt += 1) {
+        try {
+          const receipt = await requestSubmissionReceipt(submissionToken);
+
+          if (receipt.status === 'received' && receipt.leadId) {
+            return receipt;
+          }
+        } catch (error) {
+          lastError = error;
+        }
+
+        await wait(1200);
+      }
+
+      throw lastError || new Error('Submission receipt was not confirmed.');
+    }
+
     if (form) {
       form.addEventListener('submit', async function (event) {
         event.preventDefault();
         hideMessages();
 
-        if (!SCRIPT_URL || SCRIPT_URL.includes('PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE')) {
+        if (!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(SCRIPT_URL)) {
           if (errorMessage) {
             errorMessage.textContent = 'The preview form is not connected. Please email hello@brokerpostai.com.';
             errorMessage.style.display = 'block';
@@ -2165,6 +2254,8 @@
         submitButton.textContent = 'Sending...';
 
         const formData = new FormData(form);
+        const submissionToken = form.dataset.submissionToken || createSubmissionToken();
+        form.dataset.submissionToken = submissionToken;
         const payload = {
           fullName: formData.get('fullName') || '',
           agencyName: formData.get('agencyName') || '',
@@ -2177,7 +2268,9 @@
           consentToContact: formData.get('consentToContact') || '',
           email: formData.get('email') || '',
           phone: formData.get('phone') || '',
+          faxNumber: formData.get('faxNumber') || '',
           source: 'BrokerPost AI Website — Agency Marketing Preview',
+          submissionToken,
           submittedAt: new Date().toISOString()
         };
 
@@ -2189,13 +2282,16 @@
             body: JSON.stringify(payload)
           });
 
+          await confirmSubmissionReceipt(submissionToken);
+
           form.reset();
+          delete form.dataset.submissionToken;
           form.classList.add('submitted');
           if (successMessage) successMessage.style.display = 'block';
         } catch (error) {
           form.classList.add('error');
           if (errorMessage) {
-            errorMessage.textContent = 'Something went wrong. Please try again or email hello@brokerpostai.com.';
+            errorMessage.textContent = 'We could not confirm that your request was received. Your information is still on this page—please try again or email hello@brokerpostai.com.';
             errorMessage.style.display = 'block';
           }
         } finally {
