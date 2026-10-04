@@ -1773,6 +1773,115 @@
       }
     }
 
+
+    /* Spatial layout: original brand palette and original functional markup retained. */
+    body { min-width: 0; background: #fff; }
+    .page { width: 100%; max-width: 1440px; padding: 24px 40px 40px; }
+    header { height: auto; min-height: 64px; padding: 0 24px 20px; gap: 24px; }
+    nav { gap: 28px; margin-left: 0; }
+    .hero { height: auto; min-height: 680px; padding: 90px 48px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+    .hero-copy { position: relative; left: auto; top: auto; width: auto; padding: 0; }
+    h1 { font-size: clamp(40px, 3.9vw, 56px); line-height: 1.06; }
+    .hero-copy p { width: auto; max-width: 540px; line-height: 1.7; margin: 24px 0 32px; }
+    .hero-actions { flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .trust-row { flex-wrap: wrap; gap: 18px; }
+    .device-scene { position: relative; inset: auto; height: 510px; margin: 0; pointer-events: none; }
+    .phone { left: 50%; top: 0; transform: translateX(-50%) rotate(9deg); }
+    .ready { left: auto; right: -12px; top: 36px; z-index: 5; }
+    .process { left: auto; right: -12px; top: 390px; z-index: 5; }
+    main > section:not(.hero):not(.premium-section):not(.form-band):not(.cta) { margin: 0 auto; padding: 96px 0; width: 100%; max-width: 1200px; }
+    main > section + section:not(.premium-section):not(.form-band):not(.cta) { border-top: 1px solid var(--line); }
+    .section-title, .content-title, .how h2 { max-width: 840px; margin: 0 auto 40px; font-size: clamp(28px, 3vw, 40px); line-height: 1.18; letter-spacing: -1.2px; }
+    .preview-cards, .sample-cards, .steps { width: 100%; max-width: none; gap: 24px; }
+    .big-card, .sample-card, .step-card { border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 4px 16px rgba(7,17,47,.04); background: #fff; }
+    .big-card { padding: 32px 24px; min-height: 280px; }
+    .big-card h3 { line-height: 1.25; }
+    .big-card p, .sample-card p, .step-card p { font-size: 14px; line-height: 1.65; }
+    .sample-card { min-height: 240px; padding: 32px 24px 60px 104px; }
+    .steps { grid-template-columns: 1fr 24px 1fr 24px 1fr; gap: 16px; }
+    .step-card { padding: 28px 20px; min-height: 180px; align-items: flex-start; }
+    .step-card h4 { line-height: 1.35; }
+    .preview-note { width: 100%; margin: 24px 0 0; padding: 22px; border-radius: 16px; }
+    .customer-proof { margin-top: 28px; }
+    .premium-section { max-width: 1200px; margin: 0 auto 96px; padding: 80px 48px; box-shadow: 0 6px 24px rgba(7,17,47,.06); }
+    .premium-head { gap: 40px; margin-bottom: 40px; }
+    .premium-head h2 { line-height: 1.15; }
+    .premium-grid { gap: 20px; }
+    .premium-item { padding: 24px; }
+    .premium-item p { font-size: 13px; line-height: 1.65; }
+    .premium-footer { margin-top: 32px; }
+    .form-band { width: 100%; max-width: 1200px; margin: 0 auto; border-radius: 24px; box-shadow: 0 4px 16px rgba(7,17,47,.04); }
+    .form-copy { padding: 48px 32px; }
+    .form-copy h2 { line-height: 1.18; }
+    .form-copy p { width: auto; line-height: 1.7; }
+    .faq { width: 100%; }
+    details.faq-menu { box-shadow: 0 4px 16px rgba(7,17,47,.04); }
+    details.faq-menu > summary { min-height: 88px; }
+    .cta { width: 100%; max-width: 1200px; height: auto; min-height: 220px; margin: 0 auto; padding: 48px; border-radius: 24px; }
+    footer { width: 100%; max-width: 1200px; margin: 64px auto 0; }
+    .multiplication-heading { max-width: 800px; margin-bottom: 40px; }
+    .multiplication-heading h2 { margin: 0 0 22px; font-size: clamp(32px, 3.7vw, 48px); line-height: 1.12; letter-spacing: -1.6px; }
+    .multiplication p { color: var(--muted); font-size: 17px; line-height: 1.75; }
+    .multiplication-heading p { margin: 0; max-width: 650px; }
+    .multiplication-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 24px; align-items: stretch; }
+    .multiplication-main, .multiplication-callout, .multiplication-channels { border: 1px solid var(--line); border-radius: 24px; box-shadow: 0 4px 16px rgba(7,17,47,.04); }
+    .multiplication-main { padding: 40px; background: var(--soft); }
+    .multiplication-main > p { margin: 0 0 24px; }
+    .multiplication-main > p:last-child { margin-bottom: 0; }
+    .multiplication .highlight-text { color: var(--blue); font-weight: 700; line-height: 1.8; }
+    .multiplication-callout { margin: 0; padding: 40px; background: #fff9de; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 32px; }
+    .multiplication-callout svg { width: 44px; height: 44px; stroke: var(--ink); stroke-width: 1.6; }
+    .multiplication-callout p { margin: 0; color: var(--ink); font-size: clamp(23px, 2.2vw, 30px); font-weight: 750; line-height: 1.35; letter-spacing: -.6px; }
+    .multiplication-channels { padding: 40px; margin-top: 24px; text-align: center; background: #fff; }
+    .multiplication .bold-pillar { margin: 0 0 28px; color: var(--ink); font-size: clamp(22px, 2.5vw, 30px); line-height: 1.3; font-weight: 800; letter-spacing: -.7px; }
+    .channel-row { list-style: none; padding: 0; margin: 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .channel-row li { flex: 1 1 140px; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); color: var(--ink); font-size: 13px; font-weight: 700; }
+    .channel-icon { flex: 0 0 28px; width: 28px; height: 28px; display: grid; place-items: center; color: var(--blue); font-size: 26px; font-weight: 800; }
+    .channel-icon svg { width: 26px; height: 26px; stroke-width: 1.8; }
+    .multiplication .subtext { margin: 26px auto 0; max-width: 730px; font-size: 14px; }
+    @media (max-width: 1100px) {
+      .hero { padding: 80px 32px; grid-template-columns: 1fr; }
+      .hero-copy { max-width: 720px; }
+      .device-scene { max-width: 540px; width: 100%; margin: 32px auto 0; }
+      .preview-cards, .premium-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .premium-head { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); min-height: 24px; }
+      .step-card { min-height: auto; }
+      .sample-cards { grid-template-columns: 1fr; }
+      .sample-card { min-height: 190px; }
+    }
+    @media (max-width: 760px) {
+      .page { padding: 16px 20px 32px; }
+      header { padding: 8px 0 24px; }
+      .hero { padding: 64px 24px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .button { width: 100%; white-space: normal; }
+      .eyebrow { line-height: 1.6; padding: 8px 12px; }
+      main > section:not(.hero):not(.premium-section):not(.form-band):not(.cta) { padding: 80px 0; }
+      .multiplication-grid { grid-template-columns: 1fr; }
+      .multiplication-main, .multiplication-callout, .multiplication-channels { padding: 28px 24px; }
+      .multiplication-callout { gap: 20px; }
+      .premium-section { padding: 64px 24px; margin-bottom: 80px; }
+      .premium-head h2 { font-size: 32px; }
+      .premium-footer { flex-direction: column; align-items: flex-start; }
+      .form-band { grid-template-columns: 1fr; }
+      .cta { padding: 32px 24px; }
+    }
+    @media (max-width: 480px) {
+      .page { padding-left: 12px; padding-right: 12px; }
+      .brand { font-size: 22px; }
+      .preview-cards, .premium-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+      .device-scene { height: 450px; }
+      .phone { width: 220px; height: 438px; }
+      .ready { right: -8px; width: 145px; }
+      .process { right: -8px; top: 350px; width: 145px; }
+      .big-card { min-height: 0; }
+      .multiplication p { font-size: 16px; }
+      .multiplication-callout p { font-size: 24px; }
+      .channel-row li { flex-basis: 120px; }
+    }
   </style>
 </head>
 <body>
@@ -1856,6 +1965,36 @@
             <svg viewBox="0 0 32 32" style="color:#2fb46e;fill:#2fb46e;stroke:#fff"><circle cx="16" cy="16" r="16"/><circle cx="11" cy="14" r="2"/><circle cx="21" cy="14" r="2"/><circle cx="16" cy="11" r="2"/><path d="M8 23c1.5-4 5-5 8-5s6.5 1 8 5"/></svg>
             <span>One focused<br>monthly system</span>
           </div>
+        </div>
+      </section>
+
+
+      <section class="multiplication" id="content-multiplication" aria-labelledby="multiplication-title">
+        <div class="multiplication-heading">
+          <h2 id="multiplication-title">One plan. More places to be seen.</h2>
+          <p>Your brokerage does not need a different marketing strategy for every platform.</p>
+        </div>
+        <div class="multiplication-grid">
+          <div class="multiplication-main">
+            <p>BrokerPost gives you one clear monthly direction, then creates the content your team can use across the channels that matter most.</p>
+            <p class="highlight-text">LinkedIn. Facebook. Instagram. Google Business Profile. YouTube. Email.</p>
+            <p>One useful topic can become a social post, a short video, a Google update, part of your newsletter, and another reason for customers to see your brokerage.</p>
+          </div>
+          <aside class="multiplication-callout">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="14" width="10" height="12" rx="3"/><path d="M13 20h8M21 8v24M21 8h6M21 20h6M21 32h6"/><rect x="27" y="4" width="10" height="8" rx="2"/><rect x="27" y="16" width="10" height="8" rx="2"/><rect x="27" y="28" width="10" height="8" rx="2"/></svg>
+            <p>Turn one marketing direction into multiple customer touchpoints.</p>
+          </aside>
+        </div>
+        <div class="multiplication-channels">
+          <p class="bold-pillar">One monthly BrokerPost system. 5+ ways to stay visible.</p>
+          <ul class="channel-row" aria-label="Core publishing channels">
+            <li><span class="channel-icon" aria-hidden="true">in</span><span>LinkedIn</span></li>
+            <li><span class="channel-icon" aria-hidden="true">f</span><span>Facebook</span></li>
+            <li><span class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></span><span>Instagram</span></li>
+            <li><span class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9 5 3h14l2 6M3 9h18M4 9v12h16V9M9 21v-7h6v7M8 3 7 9M16 3l1 6"/></svg></span><span>Google Business Profile</span></li>
+            <li><span class="channel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z" fill="currentColor" stroke="none"/></svg></span><span>YouTube</span></li>
+          </ul>
+          <p class="subtext">You decide where and when to publish. BrokerPost gives you the content and structure to work from.</p>
         </div>
       </section>
 
@@ -2149,92 +2288,90 @@
   </div>
 
   <script>
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzMm6_50dgLs3K8IaHFS_2OemGcIQYqLwrcef36_N-WFHMf5rVybhh_MZuTxtkeEGCJ/exec";
-
+    // Use the /exec URL from the NEW dashboard's deployed Code.gs.
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw706sGX1YLCQLP1OcA-MVyUMm7z44lIWpSQh1rwJ6QNPyl8B2ZRu7v7I8yiJP5_qAr4Q/exec";
+    const EXPECTED_VERSION = '2026-10-03-intake-v2';
     const form = document.getElementById('preview-form');
     const submitButton = document.getElementById('submit-button');
     const successMessage = document.getElementById('success-message');
     const errorMessage = document.getElementById('error-message');
-
+    let pendingRequest = null;
     function hideMessages() {
-      if (successMessage) successMessage.style.display = 'none';
-      if (errorMessage) errorMessage.style.display = 'none';
-      if (form) form.classList.remove('submitted', 'error');
+      successMessage.style.display = 'none'; errorMessage.style.display = 'none';
+      form.classList.remove('submitted', 'error');
     }
-
     function createSubmissionToken() {
-      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
-        return window.crypto.randomUUID().replace(/-/g, '');
-      }
-
-      return (
-        Date.now().toString(36) +
-        Math.random().toString(36).slice(2) +
-        Math.random().toString(36).slice(2)
-      );
+      const bytes = new Uint8Array(24); crypto.getRandomValues(bytes);
+      return Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
     }
-
-    if (form) {
-      form.addEventListener('submit', async function (event) {
-        event.preventDefault();
-        hideMessages();
-
-        if (!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(SCRIPT_URL)) {
-          if (errorMessage) {
-            errorMessage.textContent = 'The preview form is not connected. Please email hello@brokerpostai.com.';
-            errorMessage.style.display = 'block';
-          }
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-
-        const formData = new FormData(form);
-        const submissionToken = form.dataset.submissionToken || createSubmissionToken();
-        form.dataset.submissionToken = submissionToken;
-        const payload = {
-          fullName: formData.get('fullName') || '',
-          agencyName: formData.get('agencyName') || '',
-          website: formData.get('website') || '',
-          location: formData.get('location') || '',
-          province: formData.get('province') || '',
-          mainServices: formData.get('mainServices') || '',
-          biggestContentChallenge: formData.get('biggestContentChallenge') || '',
-          currentMarketingOwner: formData.get('currentMarketingOwner') || '',
-          consentToContact: formData.get('consentToContact') || '',
-          email: formData.get('email') || '',
-          phone: formData.get('phone') || '',
-          faxNumber: formData.get('faxNumber') || '',
-          source: 'BrokerPost AI Website — Agency Marketing Preview',
-          submissionToken,
-          submittedAt: new Date().toISOString()
-        };
-
-        try {
-          await fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(payload)
-          });
-
-          form.reset();
-          delete form.dataset.submissionToken;
-          form.classList.add('submitted');
-          if (successMessage) successMessage.style.display = 'block';
-        } catch (error) {
-          form.classList.add('error');
-          if (errorMessage) {
-            errorMessage.textContent = 'We could not confirm that your request was received. Your information is still on this page—please try again or email hello@brokerpostai.com.';
-            errorMessage.style.display = 'block';
-          }
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = 'Request My Agency Preview';
-        }
+    async function payloadHash(fields) {
+      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(fields)));
+      return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+    }
+    // Read-only status requests return only receipt information, never client data.
+    function readEndpoint(params) {
+      return new Promise((resolve, reject) => {
+        const callback = 'bpReceipt_' + createSubmissionToken();
+        const script = document.createElement('script');
+        let timer;
+        function cleanup() { clearTimeout(timer); script.remove(); delete window[callback]; }
+        window[callback] = data => { cleanup(); resolve(data); };
+        script.onerror = () => { cleanup(); reject(new Error('Status unavailable')); };
+        timer = setTimeout(() => { cleanup(); reject(new Error('Status timed out')); }, 8000);
+        const url = new URL(SCRIPT_URL);
+        Object.entries({...params, callback, _:Date.now()}).forEach(([k,v]) => url.searchParams.set(k, v));
+        script.src = url.toString(); document.head.appendChild(script);
       });
     }
+    async function confirmedReceipt(request) {
+      const deadline = Date.now() + 30000;
+      while (Date.now() < deadline) {
+        try {
+          const result = await readEndpoint({action:'status', token:request.token, hash:request.hash});
+          if (result.status === 'success' && /^BP-[A-Za-z0-9-]+$/.test(result.receiptId || '')) return result;
+          if (result.status === 'error') throw Object.assign(new Error('Request could not be confirmed'), {terminal:true});
+        } catch (e) { if (e.terminal) throw e; }
+        await new Promise(resolve => setTimeout(resolve, 1200));
+      }
+      throw new Error('Receipt not confirmed');
+    }
+    if (form) form.addEventListener('submit', async event => {
+      event.preventDefault(); if (submitButton.disabled) return;
+      hideMessages(); submitButton.disabled = true; submitButton.textContent = 'Sending...';
+      try {
+        if (!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(SCRIPT_URL)) throw new Error('Form connection requires setup');
+        // Fail closed if the endpoint still points to the older system.
+        const health = await readEndpoint({action:'health'});
+        if (health.status !== 'ok' || health.version !== EXPECTED_VERSION) throw new Error('New intake deployment unavailable');
+        const data = new FormData(form), value = name => String(data.get(name) || '').trim();
+        const fields = {
+          fullName:value('fullName'),email:value('email').toLowerCase(),agencyName:value('agencyName'),
+          website:value('website'),location:value('location'),province:value('province'),
+          mainServices:value('mainServices'),biggestContentChallenge:value('biggestContentChallenge'),
+          currentMarketingOwner:value('currentMarketingOwner'),phone:value('phone'),notes:value('notes'),
+          consentToContact:value('consentToContact')
+        };
+        const hash = await payloadHash(fields);
+        if (!pendingRequest || pendingRequest.hash !== hash) pendingRequest = {token:createSubmissionToken(), hash};
+        const request = pendingRequest;
+        // An opaque POST response is never treated as success. Verify the saved receipt below.
+        const post = fetch(SCRIPT_URL, {method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},
+          body:JSON.stringify({...fields,faxNumber:value('faxNumber'),submissionToken:request.token})}).catch(() => null);
+        await Promise.race([post,new Promise(resolve => setTimeout(resolve,5000))]);
+        submitButton.textContent = 'Confirming receipt...';
+        const receipt = await confirmedReceipt(request);
+        form.reset(); pendingRequest = null; form.classList.add('submitted');
+        successMessage.textContent = 'Thanks—your request was received. Reference: ' + receipt.receiptId;
+        successMessage.style.display = 'block';
+      } catch (e) {
+        form.classList.add('error');
+        errorMessage.textContent = 'We could not confirm receipt. Your information is still here. Try again with the same details, or email hello@brokerpostai.com.';
+        errorMessage.style.display = 'block';
+      } finally {
+        submitButton.disabled = false; submitButton.textContent = 'Request My Agency Preview';
+      }
+    });
+
   </script>
 
   <script>
