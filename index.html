@@ -10,7 +10,7 @@
   <title>BrokerPost AI | Monthly Marketing for Canadian Insurance Brokerages</title>
   <meta name="description" content="BrokerPost plans and prepares human-reviewed monthly marketing content for independent Canadian insurance brokerages—built around each brokerage, province, services, and local market." />
   <meta property="og:title" content="BrokerPost AI | Monthly Marketing for Canadian Insurance Brokerages" />
-  <meta property="og:description" content="Your brokerage’s monthly marketing—planned, written and ready for review." />
+  <meta property="og:description" content="Turn one brokerage priority into a month of local marketing." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0b55ff" />
   <style>
@@ -1882,6 +1882,17 @@
       .multiplication-callout p { font-size: 24px; }
       .channel-row li { flex-basis: 120px; }
     }
+    .intake-heading { grid-column: 1 / -1; margin: 0; font-weight: 750; }
+    .intake-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-column: 1 / -1; gap: 12px 22px; min-inline-size: 0; margin: 0; padding: 0; border: 0; }
+    .intake-fields[hidden], .intake-back[hidden] { display: none; }
+    .intake-fields select { min-width: 0; }
+    .intake-fields :is(input, select):focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+    .intake-actions { grid-column: 1 / -1; display: flex; gap: 12px; }
+    .intake-actions .form-submit { flex: 1; }
+    .intake-back { border: 1px solid #dce3ef; border-radius: 8px; padding: 0 16px; background: #fff; color: inherit; font: inherit; cursor: pointer; }
+    @media (max-width: 760px) {
+      .intake-fields { grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -1908,11 +1919,11 @@
       <section class="hero">
         <div class="hero-copy">
           <span class="eyebrow">Built for independent Canadian insurance brokerages</span>
-          <h1>Your brokerage’s<br>monthly marketing<br>planned and written</h1>
-          <p>BrokerPost creates agency-specific marketing direction and human-reviewed content built around your services, province, and local market—ready for your brokerage to review.</p>
+          <h1>Turn one brokerage priority into a month of local marketing</h1>
+          <p>Choose a service you want to grow or a question your team keeps hearing. BrokerPost plans and writes a coordinated campaign around your brokerage and local market. Your team reviews and publishes it.</p>
           <div class="hero-actions">
             <a class="button primary" href="#request">Request My Free Preview</a>
-            <a class="button" href="#included"><span class="play">▶</span>See the Monthly System</a>
+            <a class="button" href="monthly-package-sample.html">See the Sample Package</a>
           </div>
           <div class="trust-row">
             <div class="trust human">
@@ -1921,7 +1932,7 @@
             </div>
             <div class="trust blue">
               <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="13"/><path d="M16 7v10l8 3"/></svg>
-              <span>Form takes under<br>2 minutes</span>
+              <span>Start with three<br>brokerage details</span>
             </div>
             <div class="trust yellow">
               <svg viewBox="0 0 36 24"><rect x="2" y="4" width="32" height="7" rx="1"/><rect x="2" y="15" width="32" height="7" rx="1"/><path d="M23 18h6"/></svg>
@@ -2026,26 +2037,30 @@
       </section>
 
       <section>
-        <h2 class="content-title">See the kind of coordinated content <span class="blue-text">your brokerage</span> could receive</h2>
+        <h2 class="content-title">See how one topic becomes a <span class="blue-text">coordinated campaign</span></h2>
         <div class="sample-cards">
           <article class="sample-card">
             <div class="sample-icon"><svg viewBox="0 0 32 32" style="fill:#0b55ff;stroke:#0b55ff"><path d="m3 15 13-11 13 11-3 3-3-3v13H9V15l-3 3-3-3z"/><path d="M13 28v-8h6v8" stroke="#fff" stroke-width="2"/></svg></div>
             <h4>Priority Service Education</h4>
-            <p>Turn a service your brokerage wants to grow into clear, useful customer education.</p>
+            <p>A Vancouver brokerage could help homeowners get started on a home inventory with one room and a phone.</p>
             <span class="pill">Social Post</span>
           </article>
           <article class="sample-card">
             <div class="sample-icon yellow"><svg viewBox="0 0 32 32" style="fill:#ffc400;stroke:#ffc400"><path d="M10 23h14a6 6 0 0 0 0-12 9 9 0 0 0-17-1 6.5 6.5 0 0 0 3 13z"/><path d="m17 19-3 6h4l-2 5 6-8h-4l2-3z" fill="#ffc400" stroke="#ffc400"/></svg></div>
-            <h4>Seasonal Risk Awareness</h4>
-            <p>Build timely campaigns around practical seasonal risks without slipping into personal advice.</p>
-            <span class="pill yellow">Campaign Pillar</span>
+            <h4>A Local Google Update</h4>
+            <p>Give customers a short home inventory reminder and a reason to visit the brokerage’s website.</p>
+            <span class="pill yellow">Google Business Profile</span>
           </article>
           <article class="sample-card">
             <div class="sample-icon"><svg viewBox="0 0 32 32" style="fill:#0b55ff;stroke:#0b55ff"><path d="M7 13 10 6h12l3 7 2 1v10h-4v-3H9v3H5V14l2-1z"/><path d="M9 16h4M19 16h4" stroke="#fff" stroke-width="2"/></svg></div>
             <h4>Short-Form Video</h4>
-            <p>Give a broker a clear hook, practical message, and closing call to action in 30–60 seconds.</p>
+            <p>Give a broker a short script that shows how to start a home inventory, with a simple filming suggestion.</p>
             <span class="pill">Video Script</span>
           </article>
+        </div>
+        <div class="preview-note">
+          <strong>See the full October package for a fictional BC brokerage.</strong>
+          <a href="monthly-package-sample.html#start">Open the sample calendar and copy</a>
         </div>
       </section>
 
@@ -2054,7 +2069,7 @@
         <div class="steps">
           <article class="step-card">
             <div class="step-icon green"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="20" rx="2"/><path d="M9 12h14M9 17h6M21 21h2"/></svg></div>
-            <div><h4>Tell us about your<br>brokerage</h4><p>Share your services, location, priorities, and current marketing challenge.</p></div>
+            <div><h4>Tell us about your<br>brokerage</h4><p>Start with your website, business email, and province. Then tell us what your team needs help with.</p></div>
           </article>
           <div class="arrow">→</div>
           <article class="step-card">
@@ -2077,23 +2092,23 @@
         <div class="premium-head">
           <div>
             <span class="eyebrow">BrokerPost Premium</span>
-            <h2>A complete monthly marketing system—not another tool to manage</h2>
+            <h2>A monthly campaign your team can put to work</h2>
             <p>Each package follows four coordinated campaign pillars and is organized so your team can review, approve, and publish without starting from scratch.</p>
           </div>
           <div class="price-card" id="pricing">
             <small>Standard pricing begins at</small>
             <strong>$750 CAD</strong>
-            <span>per month. Onboarding fee waived for the first 25 paid customers. One brokerage brand, one province, and up to five locations.</span>
+            <span>per month with an initial three-month term. Onboarding fee waived for the first 25 paid customers. One brokerage brand, one province, and up to five locations.</span>
           </div>
         </div>
         <div class="premium-grid">
           <article class="premium-item"><b>Monthly Marketing Direction</b><p>One focused objective, four campaign pillars, priority audiences, and the reason behind the month’s direction.</p></article>
-          <article class="premium-item"><b>12 Social Posts</b><p>Three posts per campaign pillar, prepared for practical adaptation across your selected channels.</p></article>
+          <article class="premium-item"><b>12 Social Posts</b><p>Three captions per campaign pillar, ready for your team to adapt and pair with brokerage visuals.</p></article>
           <article class="premium-item"><b>4 Short-Form Video Scripts</b><p>One 30–60 second script per campaign pillar with hook, message, and closing call to action.</p></article>
-          <article class="premium-item"><b>4 Google Business Posts</b><p>Concise, locally relevant posts that support service awareness and an active local presence.</p></article>
+          <article class="premium-item"><b>4 Google Business Posts</b><p>One set of four locally relevant posts for your brokerage to use across its locations.</p></article>
           <article class="premium-item"><b>1 Customer Newsletter</b><p>A monthly customer email with a recommended subject line, useful message, and general call to action.</p></article>
           <article class="premium-item"><b>30-Day Publishing Calendar</b><p>A clear schedule showing what to publish, where it belongs, and how the campaign fits together.</p></article>
-          <article class="premium-item"><b>Human Quality Review</b><p>Every package is checked for relevance, clarity, repetition, province-conscious wording, and insurance-risk language.</p></article>
+          <article class="premium-item"><b>Human Quality Review</b><p>We check relevance, clarity, repetition, and province-specific wording. We flag claims about coverage or savings for your brokerage to verify.</p></article>
           <article class="premium-item"><b>1 Revision Round</b><p>One consolidated round for reasonable tone adjustments, factual corrections, and minor content changes.</p></article>
         </div>
         <div class="premium-footer">
@@ -2113,14 +2128,11 @@
             <label for="fax-number">Leave this field empty</label>
             <input id="fax-number" name="faxNumber" type="text" tabindex="-1" autocomplete="off" />
           </div>
-          <input name="fullName" placeholder="Full Name" autocomplete="name" maxlength="120" required />
-          <input name="email" type="email" placeholder="Business Email Address" autocomplete="email" maxlength="254" required />
-
-          <input name="agencyName" placeholder="Brokerage / Agency Name" maxlength="160" required />
-          <input name="website" type="url" placeholder="Website" maxlength="300" required />
-
-          <input name="location" placeholder="City / Service Area" maxlength="160" required />
-          <select name="province" required>
+          <p class="intake-heading" id="preview-step-title" tabindex="-1">1 of 2 · Brokerage basics</p>
+          <fieldset class="intake-fields" id="preview-basics" aria-label="Brokerage basics">
+            <input name="website" type="url" aria-label="Brokerage website" placeholder="Website (https://…)" autocomplete="url" maxlength="300" required />
+            <input name="email" type="email" aria-label="Business email address" placeholder="Business Email Address" autocomplete="email" maxlength="254" required />
+          <select name="province" aria-label="Province or territory" required>
             <option value="">Province / Territory</option>
             <option value="British Columbia">British Columbia</option>
             <option value="Alberta">Alberta</option>
@@ -2137,44 +2149,53 @@
             <option value="Nunavut">Nunavut</option>
           </select>
 
-          <select name="mainServices" required>
-            <option value="">Primary Services</option>
-            <option>Home Insurance</option>
-            <option>Auto Insurance</option>
-            <option>Business Insurance</option>
-            <option>Condo / Tenant Insurance</option>
-            <option>Farm Insurance</option>
-            <option>Multiple P&amp;C Services</option>
-            <option>Other Insurance Services</option>
-          </select>
-          <input name="phone" type="tel" placeholder="Phone Optional" autocomplete="tel" maxlength="60" />
+          </fieldset>
+          <fieldset class="intake-fields" id="preview-details" aria-label="Brokerage details" hidden disabled>
+            <input name="fullName" aria-label="Full name" placeholder="Full Name" autocomplete="name" maxlength="120" required />
+            <input name="agencyName" aria-label="Brokerage or agency name" placeholder="Brokerage / Agency Name" maxlength="160" required />
+            <input name="location" aria-label="City or service area" placeholder="City / Service Area" maxlength="160" required />
+            <select name="mainServices" aria-label="Primary services" required>
+              <option value="">Primary Services</option>
+              <option>Home Insurance</option>
+              <option>Auto Insurance</option>
+              <option>Business Insurance</option>
+              <option>Condo / Tenant Insurance</option>
+              <option>Farm Insurance</option>
+              <option>Multiple P&amp;C Services</option>
+              <option>Other Insurance Services</option>
+            </select>
+            <input name="phone" aria-label="Phone (optional)" type="tel" placeholder="Phone Optional" autocomplete="tel" maxlength="60" />
 
-          <select class="wide" name="biggestContentChallenge" required>
-            <option value="">Biggest Marketing Challenge</option>
-            <option>We do not know what to post</option>
-            <option>We do not have time</option>
-            <option>Our content feels too generic</option>
-            <option>We want to build more local trust</option>
-            <option>We are not posting consistently</option>
-            <option>We need a clearer monthly marketing plan</option>
-          </select>
+            <select class="wide" name="biggestContentChallenge" aria-label="Biggest marketing challenge" required>
+              <option value="">Biggest Marketing Challenge</option>
+              <option>We do not know what to post</option>
+              <option>We do not have time</option>
+              <option>Our content feels too generic</option>
+              <option>We want to build more local trust</option>
+              <option>We are not posting consistently</option>
+              <option>We need a clearer monthly marketing plan</option>
+            </select>
 
-          <select class="wide" name="currentMarketingOwner" required>
-            <option value="">Who currently handles your marketing?</option>
-            <option>Owner or managing broker</option>
-            <option>Office staff</option>
-            <option>Marketing employee</option>
-            <option>Freelancer or agency</option>
-            <option>Nobody consistently</option>
-          </select>
+            <select class="wide" name="currentMarketingOwner" aria-label="Who currently handles your marketing?" required>
+              <option value="">Who currently handles your marketing?</option>
+              <option>Owner or managing broker</option>
+              <option>Office staff</option>
+              <option>Marketing employee</option>
+              <option>Freelancer or agency</option>
+              <option>Nobody consistently</option>
+            </select>
 
-          <label class="consent-row">
-            <input name="consentToContact" type="checkbox" value="Yes" required />
-            <span>I agree that BrokerPost may use the information submitted to prepare this preview and contact me about the request and BrokerPost services. I have read the <a href="privacy.html">Privacy Policy</a>.</span>
-          </label>
-          <p class="small-warning">Do not submit policyholder names, policy numbers, claims files, medical information, or other confidential customer information.</p>
+            <label class="consent-row">
+              <input name="consentToContact" type="checkbox" value="Yes" required />
+              <span>I agree that BrokerPost may use the information submitted to prepare this preview and contact me about the request and BrokerPost services. I have read the <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
+            <p class="small-warning">Do not submit policyholder names, policy numbers, claims files, medical information, or other confidential customer information.</p>
 
-          <button class="form-submit" id="submit-button" type="submit">Request My Agency Preview</button>
+          </fieldset>
+          <div class="intake-actions">
+            <button class="intake-back" id="preview-back" type="button" hidden>Back</button>
+            <button class="form-submit" id="submit-button" type="submit">Continue</button>
+          </div>
 
           <div class="privacy"><svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7-4.5 11-11 13C9.5 27 5 23 5 16V8l11-5z"/><path d="m12 16 3 3 6-7"/></svg>General marketing content only. Brokerage review is required before publication.</div>
 
@@ -2232,7 +2253,7 @@
 
             <details class="faq-row">
               <summary><span class="faq-left"><span class="faq-dot">+</span><span>Is there a minimum commitment?</span></span><span class="faq-chevron">⌄</span></summary>
-              <p>The initial service term is three months. This provides enough time to complete onboarding, deliver multiple marketing cycles, and determine whether the system is a strong fit.</p>
+              <p>The initial service term is three months. In month one, we learn your voice and prepare your first campaign. In month two, we refine the next campaign using your feedback. In month three, we review what your team used and agree on priorities for the next cycle.</p>
             </details>
 
             <details class="faq-row">
@@ -2295,7 +2316,26 @@
     const submitButton = document.getElementById('submit-button');
     const successMessage = document.getElementById('success-message');
     const errorMessage = document.getElementById('error-message');
+    const previewBasics = document.getElementById('preview-basics');
+    const previewDetails = document.getElementById('preview-details');
+    const previewStepTitle = document.getElementById('preview-step-title');
+    const previewBack = document.getElementById('preview-back');
     let pendingRequest = null;
+
+    function showPreviewStep(showDetails) {
+      previewBasics.hidden = showDetails;
+      previewDetails.hidden = !showDetails;
+      previewDetails.disabled = !showDetails;
+      previewBack.hidden = !showDetails;
+      previewStepTitle.textContent = showDetails ? '2 of 2 · Marketing details' : '1 of 2 · Brokerage basics';
+      submitButton.textContent = showDetails ? 'Request My Agency Preview' : 'Continue';
+      previewStepTitle.focus();
+    }
+
+    previewBack.addEventListener('click', () => {
+      hideMessages();
+      showPreviewStep(false);
+    });
     function hideMessages() {
       successMessage.style.display = 'none'; errorMessage.style.display = 'none';
       form.classList.remove('submitted', 'error');
@@ -2337,7 +2377,14 @@
     }
     if (form) form.addEventListener('submit', async event => {
       event.preventDefault(); if (submitButton.disabled) return;
-      hideMessages(); submitButton.disabled = true; submitButton.textContent = 'Sending...';
+      hideMessages();
+      if (previewDetails.hidden) {
+        showPreviewStep(true);
+        return;
+      }
+      submitButton.disabled = true;
+      previewBack.disabled = true;
+      submitButton.textContent = 'Sending...';
       try {
         if (!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(SCRIPT_URL)) throw new Error('Form connection requires setup');
         // Fail closed if the endpoint still points to the older system.
@@ -2360,7 +2407,10 @@
         await Promise.race([post,new Promise(resolve => setTimeout(resolve,5000))]);
         submitButton.textContent = 'Confirming receipt...';
         const receipt = await confirmedReceipt(request);
-        form.reset(); pendingRequest = null; form.classList.add('submitted');
+        form.reset();
+        showPreviewStep(false);
+        pendingRequest = null;
+        form.classList.add('submitted');
         successMessage.textContent = 'Thanks—your request was received. Reference: ' + receipt.receiptId;
         successMessage.style.display = 'block';
       } catch (e) {
@@ -2368,7 +2418,9 @@
         errorMessage.textContent = 'We could not confirm receipt. Your information is still here. Try again with the same details, or email hello@brokerpostai.com.';
         errorMessage.style.display = 'block';
       } finally {
-        submitButton.disabled = false; submitButton.textContent = 'Request My Agency Preview';
+        submitButton.disabled = false;
+        previewBack.disabled = false;
+        if (!previewDetails.hidden) submitButton.textContent = 'Request My Agency Preview';
       }
     });
 
