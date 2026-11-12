@@ -2322,6 +2322,36 @@
     const previewBack = document.getElementById('preview-back');
     let pendingRequest = null;
 
+    // Set this to the dedicated funnel Web app /exec URL after deployment.
+    const FUNNEL_URL = 'https://script.google.com/macros/s/AKfycbxSaSdw47-9cHhQ7JVdOqQwbUxmvOuP41_A3PuA_BAd95tUSaLPsyzMdc3uahpgwNQS0w/exec';
+    let recordFunnelStage = () => {};
+    if (/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(FUNNEL_URL) && FUNNEL_URL !== SCRIPT_URL && window.crypto?.getRandomValues) {
+      const visitId = createSubmissionToken().slice(0, 32);
+      const stages = new Set();
+      const campaignSource = new URLSearchParams(location.search).get('utm_source')?.toLowerCase();
+      const referrerHost = document.referrer ? new URL(document.referrer).hostname : '';
+      let source = referrerHost && referrerHost !== location.hostname ? 'referral' : 'direct';
+      if (campaignSource === 'linkedin') source = 'linkedin';
+      else if (campaignSource === 'email') source = 'email';
+      else if (['google', 'bing', 'search'].includes(campaignSource)) source = 'search';
+      else if (/(^|\.)linkedin\.com$/.test(referrerHost)) source = 'linkedin';
+      else if (/(^|\.)(google\.(com|ca)|bing\.com|duckduckgo\.com)$/.test(referrerHost)) source = 'search';
+
+      recordFunnelStage = stage => {
+        if (stages.has(stage)) return;
+        stages.add(stage);
+        fetch(FUNNEL_URL, {
+          method: 'POST', mode: 'no-cors', credentials: 'omit', referrerPolicy: 'no-referrer', keepalive: true,
+          headers: {'Content-Type': 'text/plain;charset=utf-8'},
+          body: JSON.stringify({visitId, source, stage})
+        }).catch(() => {});
+      };
+      form.addEventListener('input', event => {
+        if (previewBasics.contains(event.target)) recordFunnelStage('preview_start');
+      });
+      recordFunnelStage('landing_view');
+    }
+
     function showPreviewStep(showDetails) {
       previewBasics.hidden = showDetails;
       previewDetails.hidden = !showDetails;
@@ -2380,6 +2410,8 @@
       hideMessages();
       if (previewDetails.hidden) {
         showPreviewStep(true);
+        recordFunnelStage('preview_start');
+        recordFunnelStage('preview_step_two');
         return;
       }
       submitButton.disabled = true;
@@ -2413,6 +2445,7 @@
         form.classList.add('submitted');
         successMessage.textContent = 'Thanks—your request was received. Reference: ' + receipt.receiptId;
         successMessage.style.display = 'block';
+        recordFunnelStage('preview_confirmed');
       } catch (e) {
         form.classList.add('error');
         errorMessage.textContent = 'We could not confirm receipt. Your information is still here. Try again with the same details, or email hello@brokerpostai.com.';
