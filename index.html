@@ -2323,7 +2323,7 @@
     let pendingRequest = null;
 
     // Set this to the dedicated funnel Web app /exec URL after deployment.
-    const FUNNEL_URL = '';
+    const FUNNEL_URL = 'https://script.google.com/macros/s/AKfycbxSaSdw47-9cHhQ7JVdOqQwbUxmvOuP41_A3PuA_BAd95tUSaLPsyzMdc3uahpgwNQS0w/exec';
     let recordFunnelStage = () => {};
     if (/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(FUNNEL_URL) && FUNNEL_URL !== SCRIPT_URL && window.crypto?.getRandomValues) {
       const visitId = createSubmissionToken().slice(0, 32);
