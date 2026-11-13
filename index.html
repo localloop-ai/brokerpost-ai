@@ -1894,6 +1894,16 @@
       .intake-fields { grid-template-columns: minmax(0, 1fr); }
     }
   </style>
+  <style>
+    .hero-social-visual { width: 100%; min-width: 0; max-width: 580px; margin: 0 auto; }
+    .hero-social-visual img { display: block; width: 100%; height: auto; }
+    @media (max-width: 1050px) {
+      .hero-social-visual { max-width: 540px; margin-top: 16px; }
+    }
+    @media (max-width: 480px) {
+      .hero-social-visual { margin-top: 0; }
+    }
+  </style>
 </head>
 <body>
   <div class="page">
@@ -1941,41 +1951,10 @@
           </div>
         </div>
 
-        <div class="device-scene" aria-hidden="true">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="status"><span>9:41</span><span class="status-icons">▴▴  ̶</span></div>
-              <div class="phone-head">
-                <div class="phone-logo">
-                  <span class="phone-brand-mark">
-                    <svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 9-13h-6l1-7z"/></svg>
-                  </span>
-                  <span class="phone-brand-name"><strong>BrokerPost</strong><span>AI</span></span>
-                </div>
-                <span>⌄</span>
-              </div>
-              <h3>Agency Marketing Preview</h3>
-              <div class="phone-list">
-                <div class="phone-item"><b><span class="dot">□</span>Visibility Snapshot</b><span>1 review</span></div>
-                <div class="phone-item"><b><span class="dot">▷</span>Marketing Opportunities</b><span>3 ideas</span></div>
-                <div class="phone-item"><b><span class="dot">◌</span>Monthly Directions</b><span>4 pillars</span></div>
-                <div class="phone-item"><b><span class="dot">✓</span>Sample Content</b><span>4 assets</span></div>
-              </div>
-              <div class="phone-card">
-                <strong>Built Around Your Brokerage</strong>
-                <p>Review the opportunity before deciding what comes next.</p>
-              </div>
-              <a class="button primary" href="#request">Request Preview</a>
-            </div>
-          </div>
-          <div class="float-card ready">
-            <svg viewBox="0 0 32 32" style="color:#ffc400;fill:#ffc400;stroke:#fff"><circle cx="16" cy="16" r="16"/><path d="m10 16 4 4 8-9" stroke-width="2.7"/></svg>
-            <span>Your strategy<br>takes shape</span>
-          </div>
-          <div class="float-card process">
-            <svg viewBox="0 0 32 32" style="color:#2fb46e;fill:#2fb46e;stroke:#fff"><circle cx="16" cy="16" r="16"/><circle cx="11" cy="14" r="2"/><circle cx="21" cy="14" r="2"/><circle cx="16" cy="11" r="2"/><path d="M8 23c1.5-4 5-5 8-5s6.5 1 8 5"/></svg>
-            <span>One focused<br>monthly system</span>
-          </div>
+        <div class="hero-social-visual">
+          <img src="assets/brokerpost-social-hero.webp" width="1254" height="1254"
+            alt="One brokerage priority adapted into LinkedIn, Instagram, Facebook, X, and short-video content."
+            fetchpriority="high" decoding="async" />
         </div>
       </section>
 
